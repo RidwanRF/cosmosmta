@@ -1,0 +1,9 @@
+<meta>
+    <script src="client.lua" type="client"/>
+    <file src="object.txd" type="client"/>
+    <file src="object.dff" type="client"/>
+    <file src="object.col" type="client"/>
+    <map src="Osobnayk1.map" dimension="0"></map>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

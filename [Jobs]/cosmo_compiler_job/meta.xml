@@ -1,0 +1,9 @@
+<meta>
+    <script src="client.luac" type="client" cache="false" />
+    
+    <file src="textures.txd" />
+
+    
+    
+    <export function="loadCompliedModel" type="client" />
+</meta>

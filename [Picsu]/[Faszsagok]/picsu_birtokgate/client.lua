@@ -1,0 +1,21 @@
+function addGarazshang()
+	garazsnyitohang = playSound3D("gate_open.mp3",2041.2822265625, -1879.7960205078, 13.546875, true)
+	setSoundMaxDistance( garazsnyitohang, 30 )
+	setSoundVolume(garazsnyitohang, 2)
+	setTimer(function()
+		destroyElement(garazsnyitohang)
+	end,5000,1)
+end
+addEvent("addGarazshang", true)
+addEventHandler("addGarazshang", root, addGarazshang)
+
+function addGarazshangclose()
+	garazszarohang = playSound3D("gate_close.mp3",2041.2822265625, -1879.7960205078, 13.546875, true)
+	setSoundMaxDistance( garazszarohang, 30 )
+	setSoundVolume(garazszarohang, 2)
+	setTimer(function()
+		destroyElement(garazszarohang)
+	end,5000,1)
+end
+addEvent("addGarazshangclose", true)
+addEventHandler("addGarazshangclose", root, addGarazshangclose)

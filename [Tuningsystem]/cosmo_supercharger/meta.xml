@@ -1,0 +1,8 @@
+<meta>
+
+	<file src="files/block.txd" />
+	<file src="files/block.dff" />
+	
+	<script src="sourceC.lua" type="client" cache="false" />
+
+</meta>

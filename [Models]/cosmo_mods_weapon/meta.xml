@@ -1,0 +1,38 @@
+<meta>
+    <file src="files/ak.txd" />
+    <file src="files/ak.dff" />
+    <file src="files/axe.txd" />
+    <file src="files/axe.dff" />
+    <file src="files/sawnoff.txd" />
+    <file src="files/sawnoff.dff" />
+    <file src="files/m4.txd" />
+    <file src="files/m4.dff" />
+    <file src="files/colt45.txd" />
+    <file src="files/colt45.dff" />
+    <file src="files/ndesert.txd" />
+    <file src="files/ndesert.dff" />
+    <file src="files/katana.txd" />
+    <file src="files/katana.dff" />
+    <file src="files/nmicro_uzi.txd" />
+    <file src="files/nmicro_uzi.dff" />
+    <file src="files/mp5.txd" />
+    <file src="files/mp5.dff" />
+    <file src="files/shotgspa.txd" />
+    <file src="files/shotgspa.dff" />
+    <file src="files/nsilenced.txd" />
+    <file src="files/nsilenced.dff" />
+    <file src="files/nsniper.txd" />
+    <file src="files/nsniper.dff" />
+    <file src="files/ntec9.txd" />
+    <file src="files/ntec9.dff" />
+    <file src="files/pickaxe.txd" />
+    <file src="files/pickaxe.dff" />
+    <file src="files/knifecur.txd" />
+    <file src="files/knifecur.dff" />
+    <file src="files/chromegun.txd" />
+    <file src="files/chromegun.dff" />
+    
+    <script type="client" src="sourceC.luac" cache="false" />
+    
+    <download_priority_group>-15</download_priority_group>
+</meta>

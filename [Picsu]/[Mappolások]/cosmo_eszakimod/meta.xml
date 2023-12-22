@@ -1,0 +1,8 @@
+<meta>
+    <script src="client.lua" type="client" cache="false" />
+	
+    <file src="eszaki.dff" />
+    <file src="eszaki.txd" />
+    <file src="eszaki.col" />
+	
+</meta>

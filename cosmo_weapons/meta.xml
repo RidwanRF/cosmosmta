@@ -1,0 +1,21 @@
+﻿<meta>
+    <script src="sourceC.luac" type="client" cache="false" />
+    
+    <file src="weapon/desert.dff" />
+    <file src="weapon/desert.txd" />
+    <file src="weapon/cuntgun.dff" />
+    <file src="weapon/cuntgun.txd" />
+    <file src="weapon/brass.dff" />
+    <file src="weapon/brass.txd" />
+    <file src="weapon/flowers.dff" />
+    <file src="weapon/flowers.txd" />
+    <file src="weapon/laser.dff" />
+    <file src="weapon/laser.txd" />
+    <file src="weapon/satchel.dff" />
+    <file src="weapon/satchel.txd" />
+    <file src="weapon/desertk.txd" />
+    <file src="weapon/desertw.txd" />
+    
+    <min_mta_version client="1.5.6" server="1.5.6" />
+    <download_priority_group>-43</download_priority_group>
+</meta>

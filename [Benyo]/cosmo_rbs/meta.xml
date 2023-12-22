@@ -1,0 +1,18 @@
+<meta>
+    <script src="client.lua" type="client" cache="false"/>
+    <script src="server.lua" type="server"/>
+    <script src="global.lua" type="shared" cache="false"/>
+    <file src="sfpro.ttf" />
+
+    <file src="files/968.png" />
+    <file src="files/978.png" />
+    <file src="files/981.png" />
+    <file src="files/3578.png" />
+    <file src="files/1228.png" />
+    <file src="files/1282.png" />
+    <file src="files/1422.png" />
+    <file src="files/1424.png" />
+    <file src="files/1425.png" />
+    <file src="files/1459.png" />
+    <file src="files/3091.png" />
+</meta>

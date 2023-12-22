@@ -1,0 +1,23 @@
+<meta>
+    <script src="global.luac" type="shared" cache="false" />
+    <script src="client.luac" type="client" cache="false" />
+    <script src="server.lua" type="server" />
+    
+    <script src="map/hackmap.lua" type="server" cache="false" />
+    
+    <file src="files/monitor.png" />
+    <file src="files/orpbg.png" />
+    <file src="files/cmd.PNG" />
+    <file src="files/clock.png" />
+    <file src="files/list.PNG" />
+    <file src="files/close.png" />
+    <file src="files/icons/web.png" />
+    <file src="files/icons/consol.png" />
+    
+    <file src="files/ui.ttf" />
+    <file src="files/ui-light.ttf" />
+    
+    <file src="files/sounds/granted.mp3" />
+    <file src="files/sounds/bad.mp3" />
+    <download_priority_group>-55</download_priority_group>
+</meta>

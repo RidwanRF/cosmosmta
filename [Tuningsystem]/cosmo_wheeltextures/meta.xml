@@ -1,0 +1,39 @@
+<meta>
+    <script src="sourceG.lua" type="shared" cache="false" />
+    <script src="sourceC.lua" type="client" cache="false" />
+    
+    <file src="files/changer.fx" />
+    
+    <export function="getVehicleWheeltextures" type="shared" />
+    <export function="setVehicleWheeltexture" type="client" />
+    
+    <file src="files/wheeltextures/466/1.png" />
+    
+    <file src="files/wheeltextures/404/1.png" />
+    
+    <file src="files/wheeltextures/438/1.png" />
+    
+    <file src="files/wheeltextures/550/1.png" />
+    
+    <file src="files/wheeltextures/540/1.png" />
+    
+    <file src="files/wheeltextures/541/1.png" />
+    
+    <file src="files/wheeltextures/420/1.dds" />
+    <file src="files/wheeltextures/420/2.dds" />
+    <file src="files/wheeltextures/420/3.dds" />
+    
+    
+    <file src="files/wheeltextures/526/1.png" />
+    <file src="files/wheeltextures/526/2.png" />
+    <file src="files/wheeltextures/526/3.png" />
+    <file src="files/wheeltextures/526/4.png" />
+    <file src="files/wheeltextures/526/5.png" />
+	
+    <file src="files/wheeltextures/547/borarim.png" />
+	
+    <file src="files/wheeltextures/546/1.png" />
+    
+    
+    <download_priority_group>-51</download_priority_group>
+</meta>

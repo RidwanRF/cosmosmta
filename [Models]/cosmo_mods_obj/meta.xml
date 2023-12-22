@@ -1,0 +1,24 @@
+<meta>
+    <file src="files/ce_farmland03.sarp" />
+    <file src="files/transportcart.sarp" />
+    <file src="files/safe.sarp" />
+    <file src="files/platform.sarp" />
+    <file src="files/megaphone.sarp" />
+    <file src="files/medicalbag.sarp" />
+    <file src="files/kmb_cratex.txd" />
+    <file src="files/industshelves.sarp" />
+    
+    <file src="files/eszaki_alap.sarp" />
+    <file src="files/wheelclamp.sarp" />
+    <file src="files/store.sarp" />
+    <file src="files/hospital.sarp" />
+    <file src="files/letter.dff" />
+    <file src="files/letter.txd" />
+    
+    <script type="shared" src="sourceG.luac" cache="false" />
+    <script type="server" src="sourceS.lua" />
+    <script type="client" src="sourceC.luac" cache="false" />
+    
+    <export type="shared" function="getModelIdFromName" />
+    <download_priority_group>-18</download_priority_group>
+</meta>

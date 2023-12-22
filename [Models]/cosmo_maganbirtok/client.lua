@@ -1,0 +1,7 @@
+﻿txd = engineLoadTXD ( "1.txd" )
+engineImportTXD ( txd, 8640 )
+col = engineLoadCOL ( "1.col" )
+engineReplaceCOL ( col, 8640 )
+dff = engineLoadDFF ( "1.dff" )
+engineReplaceModel ( dff, 8640 )
+engineSetModelLODDistance(8640, 500)

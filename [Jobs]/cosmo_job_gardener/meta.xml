@@ -1,0 +1,15 @@
+<meta>
+    <download_priority_group>-33</download_priority_group>
+    
+    <script src="global.lua" type="shared" cache="false" />
+    <script src="client.lua" type="client" cache="false" />
+    <script src="server.lua" type="server" cache="false" />
+
+    <file src = "files/mower.mp3" />
+
+    <file src = "files/csapdff.cosmomodel" />
+    <file src = "files/csaptxd.cosmomodel" />
+    <file src = "files/csapcol.cosmomodel" />
+
+    <min_mta_version client="1.5.8" server="1.5.8" />
+</meta>

@@ -1,0 +1,10 @@
+addEventHandler('onClientResourceStart', resourceRoot,
+function()
+local txd = engineLoadTXD('files/models/garazs2.txd',true)
+engineImportTXD(txd, 7588)
+local dff = engineLoadDFF('files/models/garazs2.dff', 0)
+engineReplaceModel(dff, 7588)
+local col = engineLoadCOL('files/models/garazs2.col')
+engineReplaceCOL(col, 7588)
+engineSetModelLODDistance(7588, 301)
+end)

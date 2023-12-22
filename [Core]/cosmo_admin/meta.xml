@@ -1,0 +1,33 @@
+<meta>
+    <download_priority_group>-9</download_priority_group>
+    
+    <script src="sourceS.lua" type="server" />
+    <script src="sourceC.luac" type="client" cache="false" />
+    
+    <script src="commands/playerS.lua" type="server" />
+    <script src="commands/vehicleS.lua" type="server" />
+    <script src="commands/developerS.lua" type="server" />
+    <script src="commands/otherS.lua" type="server" />
+    <script src="commands/rtc.lua" type="server" />
+    
+    <export type="server" function="addAdminCommand" />
+    <export type="client" function="addAdminCommand" />
+    
+    <export http="true" type="server" function="getResourceList" />
+    <export http="true" type="server" function="resourceAction" />
+    <export http="true" type="server" function="restartAllRes" />
+    <export http="true" type="server" function="ucpAction" />
+    <export http="true" type="server" function="updateAstat" />
+    <export http="true" type="server" function="havePermission" />
+    
+    <file src="files/szakall.dff" />
+    <file src="files/szakall.txd" />
+    
+    <file src="files/triko.dff" />
+    <file src="files/triko.txd" />
+    
+    <file src="files/TheParrot1.txd" />
+    <file src="files/TheParrot1.dff" />
+    <file src="files/asay.wav" />
+    <min_mta_version server="1.5.5-9.14060"></min_mta_version>
+</meta>

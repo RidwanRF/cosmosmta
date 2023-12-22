@@ -1,0 +1,50 @@
+<meta>
+    <script src="sourceG.lua" type="shared" cache="false" />
+    <script src="sourceC.luac" type="client" cache="false" />
+    
+    <file src="files/changer.fx" />
+    
+    <export function="getVehicleFacelifts" type="shared" />
+    <export function="setVehicleFacelift" type="client" />
+    
+    <file src="files/facelifts/445/1.png" />
+    <file src="files/facelifts/445/2.png" />
+    <file src="files/facelifts/445/3.png" />
+    <file src="files/facelifts/445/4.png" />
+    <file src="files/facelifts/445/5.png" />
+    <file src="files/facelifts/445/6.png" />
+    
+    <file src="files/facelifts/400/1.png" />
+    <file src="files/facelifts/400/2.png" />
+    <file src="files/facelifts/400/3.png" />
+    
+    <file src="files/facelifts/558/1.png" />
+    
+    <file src="files/facelifts/420/1.png" />
+    <file src="files/facelifts/420/2.png" />
+    <file src="files/facelifts/420/3.png" />
+    <file src="files/facelifts/420/4.png" />
+    <file src="files/facelifts/420/5.png" />
+    <file src="files/facelifts/420/6.png" />
+    
+    
+    <file src="files/facelifts/551/1.png" />
+    <file src="files/facelifts/551/2.png" />
+    <file src="files/facelifts/551/3.png" />
+    <file src="files/facelifts/551/4.png" />
+    
+    <file src="files/facelifts/529/1.png" />
+    
+    <file src="files/facelifts/466/1.png" />
+    
+    
+    <file src="files/facelifts/421/1.png" />
+    <file src="files/facelifts/421/2.png" />
+    <file src="files/facelifts/421/3.png" />
+    <file src="files/facelifts/421/4.png" />
+	
+    <file src="files/facelifts/547/boralights.png" />
+    
+    
+    <download_priority_group>-51</download_priority_group>
+</meta>

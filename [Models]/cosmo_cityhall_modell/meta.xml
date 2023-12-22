@@ -1,0 +1,114 @@
+<meta>
+
+<script src="client.lua" type="client" cache="false" />
+<script src="server.lua" type="server" />
+<script src="global.lua" type="shared" cache="false" />
+
+<file src="files/vh_berendezes.txd" />
+<file src="files/berendezes.dff" />
+<file src="files/berendezes.col" />
+
+<file src="files/cardreader.txd" />
+<file src="files/cardreader.dff" />
+<file src="files/cardreader.col" />
+
+<file src="files/gate.txd" />
+<file src="files/gate.dff" />
+<file src="files/gate.col" />
+
+<file src="files/glass.dff" />
+<file src="files/glass.col" />
+
+<file src="files/lift.txd" />
+<file src="files/lift.dff" />
+<file src="files/lift.col" />
+
+<file src="files/liftdoor.txd" />
+<file src="files/liftdoor.dff" />
+<file src="files/liftdoor.col" />
+
+<file src="files/logo.txd" />
+<file src="files/logo.dff" />
+<file src="files/logo.col" />
+
+<file src="files/vh.lifeline" />
+<file src="files/vh.col" />
+
+<file src="files/textures.txd" />
+<file src="files/Armchair.dff" />
+<file src="files/Armchair.col" />
+
+<file src="files/Bookshelf.dff" />
+<file src="files/Bookshelf.col" />
+
+<file src="files/Carpet.dff" />
+<file src="files/Carpet.col" />
+
+<file src="files/Couch.dff" />
+<file src="files/Couch.col" />
+
+<file src="files/Desk_lamp.dff" />
+<file src="files/Desk_lamp.col" />
+
+<file src="files/Lamp.dff" />
+<file src="files/Lamp.col" />
+
+<file src="files/Monitor.dff" />
+<file src="files/Monitor.col" />
+
+<file src="files/Notebook.dff" />
+<file src="files/Notebook.col" />
+
+<file src="files/Office_chair.dff" />
+<file src="files/Office_chair.col" />
+
+<file src="files/Outside_bench.dff" />
+<file src="files/Outside_bench.col" />
+
+<file src="files/PC.dff" />
+<file src="files/PC.col" />
+
+<file src="files/Plant.dff" />
+<file src="files/Plant.col" />
+
+<file src="files/Tv.dff" />
+<file src="files/Tv.col" />
+
+<file src="files/TvStand_1.dff" />
+<file src="files/TvStand_1.col" />
+
+<file src="files/Wall_lamp.dff" />
+<file src="files/Wall_lamp.col" />
+
+<file src="files/Dining_chair.dff" />
+<file src="files/Dining_chair.col" />
+
+<file src="files/Dining_table.dff" />
+<file src="files/Dining_table.col" />
+
+<file src="files/gta_tree_boak.txd" />
+<file src="files/veg_treea3.dff" />
+<file src="files/vegepart.col" />
+
+
+<oop>true</oop>
+<info type="map" version="1.0.0"></info>
+<map src="map/cubemta-vh.map" dimension="0"></map>
+<settings>
+    <setting name="#maxplayers" value="[ 128 ]"></setting>
+    <setting name="#useLODs" value="[ false ]"></setting>
+    <setting name="#gamespeed" value="[ 1 ]"></setting>
+    <setting name="#minplayers" value="[ 0 ]"></setting>
+    <setting name="#gravity" value="[ 0.0080000004 ]"></setting>
+    <setting name="#waveheight" value="[ 0 ]"></setting>
+    <setting name="#locked_time" value="[ true ]"></setting>
+    <setting name="#weather" value="[ 0 ]"></setting>
+    <setting name="#time" value="0:0"></setting>
+</settings>
+<script src="map/mapEditorScriptingExtension_s.lua" type="server"></script>
+<script src="map/mapEditorScriptingExtension_c.lua" type="client" validate="false" cache="false" ></script>
+
+
+
+
+</meta>

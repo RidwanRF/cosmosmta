@@ -1,0 +1,18 @@
+<meta>
+
+    <script src="sourceS.lua" type="server" />
+    <script src="sourceC.lua" type="client" cache="false" />
+    
+    <file src="files/arrow.png" />
+    <file src="files/panel.png" />
+    <file src="files/led.png" />
+    <file src="files/ledgreen.png" />
+    <file src="files/ledorange.png" />
+    <file src="files/ledred.png" />
+    <file src="files/beep1.mp3" />
+    <file src="files/beep2.mp3" />
+    <file src="files/airride.mp3" />
+    
+    <download_priority_group>-10</download_priority_group>
+    
+</meta>

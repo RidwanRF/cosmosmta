@@ -1,0 +1,8 @@
+<meta>
+    <script src="client.lua" type="client" />
+	
+    <file src="8462.col" />
+    <file src="8462.dff" />
+    <file src="8462.txd" />
+	
+</meta>

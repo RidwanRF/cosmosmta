@@ -1,0 +1,26 @@
+<meta>
+    <oop>true</oop>
+    <script src="Kliens.lua" type="client" />
+    
+    <file src="models/small.dff" />
+    <file src="models/small.txd" />
+    <file src="models/small.col" />
+    
+    <file src="models/big.dff" />
+    <file src="models/big.txd" />
+    <file src="models/big.col" />
+    
+    <file src="models/med.dff" />
+    <file src="models/med.txd" />
+    <file src="models/med.col" />
+    
+    <file src="models/letter.dff" />
+    <file src="models/letter.txd" />
+    
+    <file src="models/elfmodel.dff" />
+    
+    
+    
+    
+    <download_priority_group>-62</download_priority_group>
+</meta>

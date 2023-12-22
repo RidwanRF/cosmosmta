@@ -1,0 +1,87 @@
+<meta>
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    
+    <export function="setWeaponStickerC" type="client" />
+    <export function="setObjectPaintjobC" type="client" />
+    <export function="setStickerOnWeapon" type="server" />
+    <export function="removeWeaponStickers" type="server" />
+    <export function="setObjectPaintjob" type="server" />
+    <export function="removeStickerFromObject" type="server" />
+    
+    <file src="texturechanger.fx" />
+    <file src="ak/camo.png" />
+    <file src="ak/camo2.png" />
+    <file src="ak/camo3.png" />
+    <file src="ak/gold.png" />
+    <file src="ak/gold2.png" />
+    <file src="ak/kitty.png" />
+    <file src="ak/silver.png" />
+    
+    <file src="deagle/camo.png" />
+    <file src="deagle/gold.png" />
+    <file src="deagle/hellokitty.png" />
+    
+    <file src="knife/knife1.png" />
+    <file src="knife/knife2.png" />
+    <file src="knife/knife3.png" />
+    <file src="knife/knife4.png" />
+    <file src="knife/knife5.png" />
+    <file src="knife/knife6.png" />
+    <file src="knife/knife7.png" />
+    <file src="knife/knife8.png" />
+    
+    <file src="mp5/mp51.png" />
+    <file src="mp5/mp52.png" />
+    <file src="mp5/mp53.png" />
+    <file src="mp5/mp54.png" />
+    <file src="mp5/mp55.png" />
+    <file src="mp5/mp56.png" />
+    
+    <file src="silenced/camo.png" />
+    <file src="silenced/kitty.png" />
+    <file src="silenced/gold.png" />
+    
+    <file src="sniper/camo.png" />
+    <file src="sniper/camo2.png" />
+    <file src="sniper/gold.png" />
+    <file src="sniper/hellokitty.png" />
+    
+    <file src="tec/tec1.png" />
+    <file src="tec/tec2.png" />
+    <file src="tec/tec3.png" />
+    <file src="tec/tec4.png" />
+    
+    <file src="uzi/uzi1.png" />
+    <file src="uzi/uzi2.png" />
+    <file src="uzi/uzi3.png" />
+    <file src="uzi/uzi4.png" />
+    
+    <file src="m4/camom4.png" />
+    <file src="m4/goldm4.png" />
+    <file src="m4/hellom4.png" />
+    <file src="m4/paintm4.png" />
+    <file src="m4/winterm4.png" />
+    <file src="m4/icem4.png" />
+    <file src="m4/wandalm4.png" />
+    <file src="m4/digitm4.png" />
+    <file src="m4/rustm4.png" />
+    <file src="m4/silverm4.png" />
+    <file src="m4/rosem4.png" />
+    
+    <file src="shotgun/shotgun_camo.png" />
+    <file src="shotgun/shotgun_gold.png" />
+    <file src="shotgun/shotgun_rust2.png" />
+    
+    <file src="katana/gold.png" />
+    <file src="katana/galaxy.png" />
+    
+    
+    <file src="sawed/gold.png" />
+    <file src="sawed/camo.png" />
+    <file src="sawed/tiger.png" />
+    <file src="sawed/winter.png" />
+    
+    <min_mta_version client="1.5.6" server="1.5.6" />
+    <download_priority_group>-69</download_priority_group>
+</meta>

@@ -1,0 +1,13 @@
+<meta>
+    <script src="global.lua" type="shared" cache="false" />
+    <script src="client.lua" type="client" cache="false" />
+    <script src="server.lua" type="server" cache="false" />
+    
+    <file src="files/mushroom1dff.cosmomodel" />
+    <file src="files/mushroom2dff.cosmomodel" />
+    <file src="files/mushroom3dff.cosmomodel" />
+    <file src="files/mushroom4dff.cosmomodel" />
+    <file src="files/mushroom5dff.cosmomodel" />
+    <file src="files/mushroomstxd.cosmomodel" />
+    <file src="files/lunabar.ttf" />
+</meta>

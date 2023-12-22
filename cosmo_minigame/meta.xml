@@ -1,0 +1,12 @@
+<meta>
+    
+    <script src="SourceC.luac" type="client" />
+    
+    <file src="files/arch.png" />
+    <file src="files/pasekon.png" />
+    <file src="files/pasekoff.png" />
+    <file src="files/pointer.png" />
+    <file src="files/pasekbg.png" />
+    <export function="setBalanceQTEState" type="client" />
+    <oop>true</oop>
+</meta>

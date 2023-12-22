@@ -1,0 +1,13 @@
+<meta>
+    
+    <script src="sourceC.lua" type="client" cache="false" />
+    
+    <file src="erik/Bob_H.txd" />
+    <file src="erik/Bob_H.dff" />
+    <file src="erik/Bob_H.col" />
+
+    <file src="zee/CEhillhouse01.txd" />
+    <file src="zee/CEhillhouse01.dff" />
+    <file src="zee/CEhillhouse01.col" />
+ 
+</meta>

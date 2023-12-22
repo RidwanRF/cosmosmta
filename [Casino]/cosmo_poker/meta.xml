@@ -1,0 +1,98 @@
+<meta>
+    <min_mta_version client="1.5.7" server="1.5.7" />
+    <script src="sourceG.lua" type="shared" cache="false" />
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    
+    <file src="files/cards/backs.png" />
+    <file src="files/cards/backs2.png" />
+    <file src="files/cards/backs3.png" />
+    <file src="files/cards/Q-4.png" />
+    <file src="files/cards/Q-3.png" />
+    <file src="files/cards/Q-2.png" />
+    <file src="files/cards/Q-1.png" />
+    <file src="files/cards/K-4.png" />
+    <file src="files/cards/K-3.png" />
+    <file src="files/cards/K-2.png" />
+    <file src="files/cards/K-1.png" />
+    <file src="files/cards/J-4.png" />
+    <file src="files/cards/J-3.png" />
+    <file src="files/cards/J-2.png" />
+    <file src="files/cards/J-1.png" />
+    <file src="files/cards/A-4.png" />
+    <file src="files/cards/A-3.png" />
+    <file src="files/cards/A-2.png" />
+    <file src="files/cards/A-1.png" />
+    <file src="files/cards/10-4.png" />
+    <file src="files/cards/10-3.png" />
+    <file src="files/cards/10-2.png" />
+    <file src="files/cards/10-1.png" />
+    <file src="files/cards/9-4.png" />
+    <file src="files/cards/9-3.png" />
+    <file src="files/cards/9-2.png" />
+    <file src="files/cards/9-1.png" />
+    <file src="files/cards/8-4.png" />
+    <file src="files/cards/8-3.png" />
+    <file src="files/cards/8-2.png" />
+    <file src="files/cards/8-1.png" />
+    <file src="files/cards/7-4.png" />
+    <file src="files/cards/7-3.png" />
+    <file src="files/cards/7-2.png" />
+    <file src="files/cards/7-1.png" />
+    <file src="files/cards/6-4.png" />
+    <file src="files/cards/6-3.png" />
+    <file src="files/cards/6-2.png" />
+    <file src="files/cards/6-1.png" />
+    <file src="files/cards/5-4.png" />
+    <file src="files/cards/5-3.png" />
+    <file src="files/cards/5-2.png" />
+    <file src="files/cards/5-1.png" />
+    <file src="files/cards/4-4.png" />
+    <file src="files/cards/4-3.png" />
+    <file src="files/cards/4-2.png" />
+    <file src="files/cards/4-1.png" />
+    <file src="files/cards/3-4.png" />
+    <file src="files/cards/3-3.png" />
+    <file src="files/cards/3-2.png" />
+    <file src="files/cards/3-1.png" />
+    <file src="files/cards/2-4.png" />
+    <file src="files/cards/2-3.png" />
+    <file src="files/cards/2-2.png" />
+    <file src="files/cards/2-1.png" />
+    
+    <file src="files/fonts/clock.png" />
+    <file src="files/fonts/Roboto.ttf" />
+    
+    <file src="files/model/chips.txd" />
+    <file src="files/model/pokertextura.txd" />
+    <file src="files/model/nagypoker.col" />
+    <file src="files/model/nagypoker.dff" />
+    
+    <file src="files/sounds/butclick.mp3" />
+    <file src="files/sounds/butfold.mp3" />
+    <file src="files/sounds/butmousenavi.mp3" />
+    <file src="files/sounds/cardshuff.mp3" />
+    <file src="files/sounds/chip1.mp3" />
+    <file src="files/sounds/chip3.mp3" />
+    <file src="files/sounds/chip4.mp3" />
+    <file src="files/sounds/chip5mp3.mp3" />
+    <file src="files/sounds/chip6.mp3" />
+    <file src="files/sounds/countdown10sec.mp3" />
+    <file src="files/sounds/dealear2lap.mp3" />
+    <file src="files/sounds/newcardintable.mp3" />
+    <file src="files/sounds/pot1.mp3" />
+    <file src="files/sounds/pot2.mp3" />
+    <file src="files/sounds/saybet.mp3" />
+    <file src="files/sounds/saybetspleasecsakneked.mp3" />
+    <file src="files/sounds/saycall.mp3" />
+    <file src="files/sounds/saycalls.mp3" />
+    <file src="files/sounds/saychech.mp3" />
+    <file src="files/sounds/saychecks.mp3" />
+    <file src="files/sounds/sayfold.mp3" />
+    <file src="files/sounds/sayfolds.mp3" />
+    <file src="files/sounds/sayletsee.mp3" />
+    <file src="files/sounds/sayraise.mp3" />
+    <file src="files/sounds/sayraises.mp3" />
+    <file src="files/sounds/saywincsaknekedha.mp3" />
+    <download_priority_group>-67</download_priority_group>
+</meta>

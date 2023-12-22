@@ -1,0 +1,7 @@
+<meta>
+    <script src="client.luac" type="client" />
+    <script src="server.lua" type="server" />
+    
+    <file src="gate_open.mp3" />
+    <file src="gate_close.mp3" />
+</meta>

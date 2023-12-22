@@ -1,0 +1,11 @@
+<meta>
+    <!-- Author : eznemgergo : 2/9/2022-->
+    <!-- Scripts -->
+    
+    <script src="sourceS.lua" type="server" />
+    <script src="sourceC.lua" type="client" cache="false" />
+    
+    
+    <download_priority_group>-10</download_priority_group>
+    
+</meta>

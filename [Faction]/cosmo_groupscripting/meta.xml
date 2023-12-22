@@ -1,0 +1,118 @@
+<meta>
+    <oop>true</oop>
+    <script type="server" src="server.lua" />
+    <script type="server" src="taser/sourceS.lua" />
+    <script type="client" src="taser/sourceC.lua" cache="false" />
+    <file src="files/taser.txd" />
+    <file src="files/taser.dff" />
+    <file src="files/taser.ogg" />
+    <file src="files/empty.png" />
+    <file src="files/texturechanger.fx" />
+    
+    <script src="siren/sourceG.luac" type="shared" cache="false" />
+    
+    <script type="client" src="arrest/sourceC.lua" />
+    <script type="server" src="arrest/sourceS.lua" />
+    <script type="shared" src="arrest/sourceG.lua" />
+    
+    <export function="getAllowedVehicles" type="shared" />
+    <export function="triggerSirenFunctions" type="client" />
+    
+    <script type="server" src="cuff/sourceS.lua" />
+    <script type="client" src="cuff/sourceC.luac" cache="false" />
+    <file src="files/standing_cuffed_back.ifp" />
+    <file src="files/standing_cuffed.ifp" />
+    <file src="files/walking_cuffed.ifp" />
+    <file src="files/cuff.dff" />
+    <file src="files/cuff.txd" />
+    <file src="files/handcuff.ogg" />
+    
+    <script type="client" src="impound/utilC.lua" cache="false" />
+    <script type="client" src="impound/impoundC.lua" cache="false" />
+    <script type="client" src="impound/getC.lua" cache="false" />
+    <script type="server" src="impound/sourceS.lua" />
+    
+    <!--     <script type="client" src="cctv/sourceC.lua" cache="false" />
+    <export type="client" function="mdcAlertFromServer" />
+    <file src="files/pointer.png" />
+    <file src="files/police_props.txd" />
+    <file src="files/blackwhite.fx" />
+    <file src="files/cammove.mp3" /> -->
+    
+    
+    <script type="client" src="clamp/sourceC.luac" cache="false" />
+    <script type="server" src="clamp/sourceS.lua" />
+    <file src="clamp/circle.png" />
+    <file src="clamp/clamp.mp3" />
+    <export function="startWheelClampingAnimation" type="client" />
+    
+    <script type="client" src="detain/sourceC.luac" cache="false" />
+    <script type="server" src="detain/sourceS.lua" />
+    
+    <file src="siren/sounds/federal_signal_smart_1.wav" />
+    <file src="siren/sounds/federal_signal_smart_2.wav" />
+    <file src="siren/sounds/federal_signal_smart_3.wav" />
+    
+    <file src="siren/sounds/federal_signal_q_1.mp3" />
+    <file src="siren/sounds/federal_signal_q_2.mp3" />
+    <file src="siren/sounds/federal_signal_q_3.mp3" />
+    
+    <file src="siren/sounds/federal_signal_smart_horn.wav" />
+    <file src="siren/sounds/eq2b_1.wav" />
+    <file src="siren/sounds/eq2b_2.wav" />
+    <file src="siren/sounds/eq2b_3.wav" />
+    <file src="siren/sounds/whelen_ws2100_1.wav" />
+    <file src="siren/sounds/whelen_ws2100_2.wav" />
+    
+    <file src="siren/sounds/whelen_alternate_hilo.wav" />
+    <file src="siren/sounds/whelen_alternate_manual.wav" />
+    <file src="siren/sounds/whelen_alternate_mech.wav" />
+    <file src="siren/sounds/whelen_alternate_wail.wav" />
+    <file src="siren/sounds/whelen_alternate_warble.wav" />
+    <file src="siren/sounds/whelen_alternate_yelp.wav" />
+    <file src="siren/sounds/whelen_gamma_horn.wav" />
+    <file src="siren/sounds/whelen_gamma_powercall.wav" />
+    <file src="siren/sounds/whelen_gamma_priority.wav" />
+    <file src="siren/sounds/whelen_gamma_wail.wav" />
+    <file src="siren/sounds/whelen_gamma_yelp.wav" />
+    
+    <file src="siren/sounds/backup.mp3" />
+    
+    <file src="files/atmrob/grinder.mp3" />
+    <file src="files/atmrob/grinder_start.mp3" />
+    <file src="files/atmrob/rob.mp3" />
+    <file src="files/atmrob/grinder_stop.mp3" />
+    
+    <!-- <script src="parkf/sourceC.lua" type="client" cache="false" />
+    <script src="parkf/sourceS.lua" type="server" /> -->
+    
+    <!--     <file src="parkf/files/tow.png" />
+    <file src="parkf/files/impound.png" />
+    <file src="parkf/files/cardisc.png" />
+    <file src="parkf/files/winch.png" />
+    <file src="parkf/files/carup.png" />
+    <file src="parkf/files/cardown.png" />
+    <file src="parkf/files/arrow.png" />
+    <file src="parkf/files/stripe.png" />
+    
+   <file src="parkf/files/couple.mp3" />
+    <file src="parkf/files/ratchet.mp3" />
+    <file src="parkf/files/rotdown.mp3" />
+    <file src="parkf/files/rotup.mp3" />
+    <file src="parkf/files/slide.mp3" />
+    <file src="parkf/files/winch.mp3" /> -->
+    
+    <oop>true</oop>
+    
+    <script src="atmrob/sourceC.lua" type="client" cache="false" />
+    <script src="atmrob/sourceS.lua" type="server" />
+    
+    <file src="files/atmrob/flex.dff" />
+    <file src="files/atmrob/flex.txd" />
+    <file src="files/atmrob/outoforder.png" />
+    <file src="files/atmrob/atm_rob.png" />
+    <file src="files/atmrob/atm_rob2.png" />
+    <file src="files/atmrob/atm_rob3.png" /> --&gt;&#x0A;    &#x0A;&#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;  &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    &#x0A;    
+    <min_mta_version client="1.5.2" server="1.5.2" />
+    <download_priority_group>-41</download_priority_group>
+</meta>

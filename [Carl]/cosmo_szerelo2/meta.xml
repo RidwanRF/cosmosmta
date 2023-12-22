@@ -1,0 +1,6 @@
+<meta>
+    <script src="client.luac" type="client" cache="false" />
+    <script src="server.lua" type="server" />
+    <file src="repair.mp3" />
+    <file src="sfcDisplaybold.ttf" />
+</meta>

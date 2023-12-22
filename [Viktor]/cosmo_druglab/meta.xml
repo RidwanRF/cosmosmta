@@ -1,0 +1,10 @@
+<meta>
+    <download_priority_group>-59</download_priority_group>
+    <script src="sourceC.luac" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    
+    <file src="files/bottle.png" />
+    <file src="files/tent.dff" />
+    <file src="files/tent.col" />
+    <file src="files/tent.txd" />
+</meta>

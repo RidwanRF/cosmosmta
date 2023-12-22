@@ -1,0 +1,740 @@
+local sx,sy = guiGetScreenSize()
+local x, y = guiGetScreenSize()
+oX, oY = 1280, 720
+local font = dxCreateFont("files/fonts/myriadproregular.ttf", 20)
+local font2 = dxCreateFont("files/fonts/Roboto.ttf", 20)
+
+local white = "#FFFFFF"
+local blue = "#ff9428"
+local green = "#87D37C"
+
+local showMiniGame = false
+local showMiniGame2 = false
+local showMiniGame3 = false
+local showMiniGame4 = false
+local showNumberPanel = false
+
+local keypadnumber = ""
+local fixkeypadnumber = ""
+local kTick = 0
+
+local robbedPed = {}
+local panelShow = false
+local goldPrice = {30000000,35000000}
+
+addEventHandler("onClientResourceStart", getResourceRootElement(),
+	function ()
+        local txd1 = engineLoadTXD("files/models/goldbox.txd") -- txd neve
+        engineImportTXD(txd1, 8423)
+        local dff1 = engineLoadDFF("files/models/box.dff", 8423) -- dff neve
+        engineReplaceModel(dff1, 8423)
+        local col1 = engineLoadCOL("files/models/goldbox.col") -- col neve
+        engineReplaceCOL(col1, 8423)
+
+        local txd2 = engineLoadTXD("files/models/goldbox.txd") -- txd neve
+        engineImportTXD(txd2, 1248)
+        local dff2 = engineLoadDFF("files/models/boxInGold.dff", 1248) -- dff neve
+        engineReplaceModel(dff2, 1248)
+        local col2 = engineLoadCOL("files/models/goldbox.col") -- col neve
+        engineReplaceCOL(col2, 1248)
+
+        local txd3 = engineLoadTXD("files/models/goldbar.txd") -- txd neve
+        engineImportTXD(txd3, 2437)
+        local dff3 = engineLoadDFF("files/models/goldbar.dff", 2437) -- dff neve
+        engineReplaceModel(dff3, 2437)
+        local col3 = engineLoadCOL("files/models/goldbar.col") -- col neve
+        engineReplaceCOL(col3, 2437)
+
+        --[[local txd = engineLoadTXD("files/models/.txd") -- txd neve
+        engineImportTXD(txd, 4000)
+        local dff = engineLoadDFF("files/models/.dff", 4000) -- dff neve
+        engineReplaceModel(dff, 4000)]]
+
+		setElementData(localPlayer,"defalultCassetteInHand", false)
+        setElementData(localPlayer,"cassetteInHand", false)
+
+        robbedPed = createPed(160,587.24676513672, -1530.8698730469, 16.390674591064)
+        setElementRotation(robbedPed,0,0,180)
+        setElementData(robbedPed,"createdRobbedPed",true)
+        setElementData(robbedPed,"robbedPed",false)
+        setElementFrozen(robbedPed,true)
+
+        for k,v in ipairs(goldSellPedPos) do
+            goldSellerPed = createPed(v[1],v[2],v[3],v[4])
+            setElementRotation(goldSellerPed,v[5],v[6],v[7])
+            setElementData(goldSellerPed,"goldSellerPed", true)
+        end
+	end
+)
+
+function drawPedPanel()
+    if panelShow == true then
+        bindKey("backspace", "down", backspaceBind)
+        dxDrawText("A bankár megfenyegetése", 1265/oX*x,1050/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+        dxDrawRectangle(505/oX*x,550/oY*y,280/oX*x,40/oY*y,tocolor(0,0,0,200))
+        dxDrawRectangle(510/oX*x,555/oY*y,132.5/oX*x,30/oY*y,tocolor(50,50,50,200)) --mégsem
+        dxDrawRectangle(647.5/oX*x,555/oY*y,132.5/oX*x,30/oY*y,tocolor(50,50,50,200)) --tovább
+        if isInSlot(510/oX*x,555/oY*y,132.5/oX*x,30/oY*y) then
+            if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                panelShow = false
+                kTick = getTickCount()
+            end
+        end
+        if isInSlot(647.5/oX*x,555/oY*y,132.5/oX*x,30/oY*y) then
+            if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                panelShow = false
+                fixkeypadnumberGenerata()
+                addEventHandler("onClientRender", root, drawPedPanelNext)
+                kTick = getTickCount()
+            end
+        end
+        dxDrawText("Mégse", 1125/oX*x,1117.5/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+        dxDrawText("Tovább", 1410/oX*x,1117.5/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+    end
+end
+addEventHandler("onClientRender", root, drawPedPanel)
+function fixkeypadnumberGenerata()
+    fixkeypadnumber = math.random(1000,9999)
+end
+function drawPedPanelNext()
+    dxDrawRectangle(505/oX*x,550/oY*y,280/oX*x,40/oY*y,tocolor(0,0,0,200))
+    dxDrawText("A széf kódja: "..blue..fixkeypadnumber, 1265/oX*x,1117.5/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+    setElementData(robbedPed,"robbedPed",true)
+    setTimer(function() 
+        removeEventHandler("onClientRender", root, drawPedPanelNext)
+    end,3000,1)
+end
+function backspaceBind()
+    if panelShow == true then
+        panelShow = false
+    end
+end
+weaponsItemID = {9,10,11,12,13,14,15,16,17,18,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157}
+function clickFunction(button, state, absX, absY, wx, wy, wz, element)
+	if element and getElementData(element,"createdRobbedPed") == true then
+		if state == "down" and button == "left" then
+			local x, y, z = getElementPosition(localPlayer)
+            if getElementData(element,"robbedPed") == false then
+                if getDistanceBetweenPoints3D(x, y, z, wx, wy, wz) <= 5 then
+                    if exports.cosmo_inventory:hasItem(9) or exports.cosmo_inventory:hasItem(10) or exports.cosmo_inventory:hasItem(11) or exports.cosmo_inventory:hasItem(12) or exports.cosmo_inventory:hasItem(13) or exports.cosmo_inventory:hasItem(14) or exports.cosmo_inventory:hasItem(15) or 
+                       exports.cosmo_inventory:hasItem(16) or exports.cosmo_inventory:hasItem(17) or exports.cosmo_inventory:hasItem(18) or exports.cosmo_inventory:hasItem(128) or exports.cosmo_inventory:hasItem(129) or exports.cosmo_inventory:hasItem(130) or exports.cosmo_inventory:hasItem(131) or 
+                       exports.cosmo_inventory:hasItem(132) or exports.cosmo_inventory:hasItem(133) or exports.cosmo_inventory:hasItem(134) or exports.cosmo_inventory:hasItem(135) or exports.cosmo_inventory:hasItem(136) or exports.cosmo_inventory:hasItem(137) or exports.cosmo_inventory:hasItem(138) or 
+                       exports.cosmo_inventory:hasItem(139) or exports.cosmo_inventory:hasItem(140) or exports.cosmo_inventory:hasItem(141) or exports.cosmo_inventory:hasItem(142) or exports.cosmo_inventory:hasItem(143) or exports.cosmo_inventory:hasItem(144) or exports.cosmo_inventory:hasItem(145) or 
+                       exports.cosmo_inventory:hasItem(146) or exports.cosmo_inventory:hasItem(147) or exports.cosmo_inventory:hasItem(148) or exports.cosmo_inventory:hasItem(149) or exports.cosmo_inventory:hasItem(150) or exports.cosmo_inventory:hasItem(150) or exports.cosmo_inventory:hasItem(150) or
+                       exports.cosmo_inventory:hasItem(151) or exports.cosmo_inventory:hasItem(152) or exports.cosmo_inventory:hasItem(153) or exports.cosmo_inventory:hasItem(154) or exports.cosmo_inventory:hasItem(155) or exports.cosmo_inventory:hasItem(156) or exports.cosmo_inventory:hasItem(157) then
+                        if panelShow == false then
+                            panelShow = true
+                        end
+                    end
+                end
+            end
+		end
+	end
+    if element and getElementData(element,"goldSellerPed") == true then
+        px,py,pz = getElementPosition(localPlayer)
+        ex,ey,ez = getElementPosition(element)
+        if getDistanceBetweenPoints3D(px,py,pz,ex,ey,ez) <= 2 then
+            if getElementData(localPlayer,"cassetteInHand") == true then
+                triggerServerEvent("playerCassetteAddOrRemove",localPlayer,localPlayer)
+                setElementData(localPlayer,"char.Money",getElementData(localPlayer,"char.Money")+math.random(goldPrice[1],goldPrice[2]))
+                setElementData(localPlayer,"cassetteInHand",false)
+            end
+        end
+    end
+end
+addEventHandler("onClientClick", getRootElement(), clickFunction, true)
+
+addEventHandler("onClientClick", getRootElement(),function(button, state, x, y, wx, wy, wz, element)
+	if button == "left" and state == "down" then
+		if isElement(element) then
+            if getElementData(localPlayer,"defalultCassetteInHand") == true then
+                if getElementType(element) == "object" then
+                    if getElementData(element, "spawnedGold") then
+                        playerX,playerY,playerZ = getElementPosition(localPlayer)
+                        targetX,targetY,targetZ = getElementPosition(element)
+                        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,targetX,targetY,targetZ) <= 2 then
+                            triggerServerEvent("destroyGoldObject",localPlayer,localPlayer,element)
+                            if getElementData(localPlayer,"defalultCassetteInHand") == true then
+                                setElementData(localPlayer,"defalultCassetteInHand",false)
+                                setElementData(localPlayer,"cassetteInHand",true)
+                            end
+                        end
+                    end
+				end
+			end
+		end
+        if isElement(element) then
+            if getElementData(localPlayer,"defalultCassetteInHand") == false then
+                if getElementType(element) == "object" then
+                    if getElementData(element, "casette1") then
+                        playerX,playerY,playerZ = getElementPosition(localPlayer)
+                        targetX,targetY,targetZ = getElementPosition(element)
+                        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,targetX,targetY,targetZ) <= 2 then
+                            if getElementData(localPlayer,"defalultCassetteInHand") == false and getElementData(localPlayer,"cassetteInHand") == false then
+                                triggerServerEvent("destroyCasetteObjectDef",localPlayer,localPlayer,element)
+                                setElementData(localPlayer,"defalultCassetteInHand",true)
+                            end
+                        end
+                    end
+                    if getElementData(element, "casette2") then
+                        playerX,playerY,playerZ = getElementPosition(localPlayer)
+                        targetX,targetY,targetZ = getElementPosition(element)
+                        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,targetX,targetY,targetZ) <= 2 then
+                            if getElementData(localPlayer,"cassetteInHand") == false and getElementData(localPlayer,"defalultCassetteInHand") == false then
+                                triggerServerEvent("destroyCasetteObjectFull",localPlayer,localPlayer,element)
+                                setElementData(localPlayer,"cassetteInHand",true)
+                            end
+                        end
+                    end
+				end
+			end
+		end
+	end
+end)
+
+addEventHandler("onClientRender", root, function()
+	if getElementData(localPlayer, "defalultCassetteInHand") or getElementData(localPlayer,"cassetteInHand") then
+		exports.cosmo_controls:toggleControl({"jump", "crouch", "sprint", "aim_weapon", "fire", "enter_passenger"}, false)
+	end
+end)
+
+function braekingGate1()
+    if showMiniGame == false then
+        playerX,playerY,playerZ = getElementPosition(localPlayer)
+        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,-1773.6005712891, 994.42749023438, 24.699027633667) <= 1 then
+            dxDrawRectangle(505/oX*x,550/oY*y,280/oX*x,40/oY*y,tocolor(0,0,0,200))
+            dxDrawText("A kapu feltöréshez használd az "..blue.."'E'"..white.." gombot!", 1265/oX*x,1120/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+        end
+    end
+end
+addEventHandler("onClientRender",root,braekingGate1)
+function braekingGate2()
+    if showMiniGame2 == false then
+        playerX,playerY,playerZ = getElementPosition(localPlayer)
+        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,596.73388671875, -1510.4379882812, 16.39599609375) <= 1 then
+            dxDrawRectangle(505/oX*x,550/oY*y,280/oX*x,40/oY*y,tocolor(0,0,0,200))
+            dxDrawText("A kapu feltöréshez használd az "..blue.."'E'"..white.." gombot!", 1265/oX*x,1120/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+        end
+    end
+end
+addEventHandler("onClientRender",root,braekingGate2)
+function braekingGate3()
+    if showMiniGame3 == false then
+        playerX,playerY,playerZ = getElementPosition(localPlayer)
+        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,604.98431396484, -1527.3676757812, 12.699782371521) <= 1 then
+            dxDrawRectangle(482.5/oX*x,550/oY*y,320/oX*x,40/oY*y,tocolor(0,0,0,200))
+            dxDrawText("A számkód panel megnyitásához használd az "..blue.."'E'"..white.." gombot!", 1265/oX*x,1120/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+        end
+    end
+end
+addEventHandler("onClientRender",root,braekingGate3)
+function braekingGate4()
+    if showMiniGame4 == true then
+        playerX,playerY,playerZ = getElementPosition(localPlayer)
+        if getDistanceBetweenPoints3D(playerX,playerY,playerZ,604.98431396484, -1527.3676757812, 12.699782371521) <= 1 then
+            dxDrawImage(550/oX*x, 300/oY*y, 200/oX*x, 200/oY*y,"files/png/keypad.png",0,0,0,tocolor(255,255,255,255))
+            dxDrawText(keypadnumber, 1275/oX*x,650/oY*y,20/oX*x,20/oY*y, tocolor(0,0,0), 0.75/oX*x, font, "center", "center",false,false,false,true)
+            if isInSlot(560/oX*x,360/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."1"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(604/oX*x,360/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."2"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(648/oX*x,360/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."3"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(560/oX*x,393/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."4"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(604/oX*x,393/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."5"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(648/oX*x,393/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."6"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(560/oX*x,426/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."7"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(604/oX*x,426/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."8"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(648/oX*x,426/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."9"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(604/oX*x,459/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() < 4 then
+                        keypadnumber = keypadnumber.."0"
+                    end
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(700/oX*x,360/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    showMiniGame4 = false
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(700/oX*x,393/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    keypadnumber = ""
+					kTick = getTickCount()
+                end
+            end
+            if isInSlot(700/oX*x,426/oY*y,40/oX*x,27.5/oY*y) then
+                if getKeyState("mouse1") and kTick+500 < getTickCount() then 
+                    if keypadnumber:len() == 4 then
+                        if tonumber(keypadnumber) == fixkeypadnumber then
+                            outputChatBox(blue.."[CM:AR]"..white.." Helyes kód: "..blue..keypadnumber,255,255,255,true)
+                            triggerServerEvent("safeDoorMove",localPlayer)
+                        else
+                            outputChatBox(blue.."[CM:AR]"..white.." Helytelen kód: "..blue..keypadnumber,255,255,255,true)
+                        end
+                    end
+					kTick = getTickCount()
+                end
+            end
+        end
+    end
+end
+addEventHandler("onClientRender",root,braekingGate4)
+
+addEventHandler("onClientVehicleEnter", getRootElement(), function(player)
+    local vehicleFound = getPedOccupiedVehicle(localPlayer)
+    if not isElement(vehicleFound) then
+        local vehicles = getElementsByType("vehicle", getRootElement(), true)
+        for i = 1, #vehicles do
+            local vehicle = vehicles[i]
+            if getElementModel(vehicle) == 428 then
+                if getElementData(vehicle,"cassetteVehicleID") >= 1 and getElementData(vehicle,"cassetteVehicleID") <= 4 then
+                    vehicleFound = vehicle
+                end
+            end
+        end
+    end
+    if isElement(vehicleFound) then
+        if getElementData(vehicleFound,"createBlip") == false then
+            if getElementModel(vehicleFound) == 428 then
+                if getElementData(vehicleFound,"vehcileSignal") == 1 then --nosignal
+                elseif getElementData(vehicleFound,"vehcileSignal") == 2 then --signal
+                    triggerServerEvent("sendGroupMessage",localPlayer,white.."Az egyik pénzszállító autót elvitték.")
+                    for k, v in ipairs(getElementsByType("player")) do
+                        if exports.cosmo_groups:isPlayerInGroup(v, 1) or exports.cosmo_groups:isPlayerInGroup(v, 4) then
+                            local x,y,z = getElementPosition(vehicleFound)
+                            vehBlip = createBlip(x,y,z,14)
+                            setElementData(vehBlip,"blipIcon","target")
+                            setElementData(vehBlip,"blipTooltipText", "Pénzszállító")
+                            setElementData(vehBlip,"blipColor",tocolor(222,107,107,255))
+                            setElementData(vehicleFound,"createBlip",true)
+                            attachElements(vehBlip,vehicleFound)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+
+bindKey("e", "down", function ()
+    playerX,playerY,playerZ = getElementPosition(localPlayer)
+    if getDistanceBetweenPoints3D(playerX,playerY,playerZ,-1773.6005712891, 994.42749023438, 24.699027633667) <= 1 then
+        if isTimer(gateOpenTimer) then outputChatBox(blue.."[RAKTÁR]"..white.." Nem tudod elkezdeni a feltörést mert nem régen próbálták!",255,255,255,true) return end
+        if showMiniGame == false then
+            showMiniGame = true
+            --carDoorBreaking
+            exports.cosmo_minigames:startMinigameButtons("buttons2", "successGateOpen", "failedGateOpen", 0.27, 0.75, 225, math.random(10, 20))
+            gateOpenTimer = setTimer(function() end, 120000, 1)
+        end
+    end
+end)
+bindKey("e", "down", function ()
+    playerX,playerY,playerZ = getElementPosition(localPlayer)
+    if getDistanceBetweenPoints3D(playerX,playerY,playerZ,596.73388671875, -1510.4379882812, 16.39599609375) <= 1 then
+        if isTimer(gateOpenTimer2) then outputChatBox(blue.."[RAKTÁR]"..white.." Nem tudod elkezdeni a feltörést mert nem régen próbálták!",255,255,255,true) return end
+        if showMiniGame2 == false then
+            showMiniGame2 = true
+            --bankDoorBreaking
+            exports.cosmo_minigames:startMinigameButtons("buttons2", "successBankDoorOpen", "failedBankDoorOpen", 0.27, 0.75, 225, math.random(5, 10))
+            triggerServerEvent("sendGroupMessage",localPlayer,white.."Valaki feltörte a bankban lévő ajtót.")
+            gateOpenTimer2 = setTimer(function() end, 120000, 1)
+        end
+    end
+end)
+bindKey("e", "down", function ()
+    playerX,playerY,playerZ = getElementPosition(localPlayer)
+    if getDistanceBetweenPoints3D(playerX,playerY,playerZ,604.98431396484, -1527.3676757812, 12.699782371521) <= 1 then
+        if showMiniGame3 == false or showMiniGame3 == true then
+            showMiniGame3 = true
+            showMiniGame4 = true
+            --safeDoorOpen
+        end
+    end
+end)
+
+bindKey("r", "down", function ()
+    if getElementData(localPlayer,"defalultCassetteInHand") == true then
+        triggerServerEvent("vehicleDeaultCassetteAddOrRemove",localPlayer,localPlayer,0,3)
+        setElementData(localPlayer,"defalultCassetteInHand",false)
+        triggerServerEvent("dropCasette", localPlayer, localPlayer)
+    end
+    if getElementData(localPlayer,"cassetteInHand") == true then
+        triggerServerEvent("vehicleDeaultCassetteAddOrRemove",localPlayer,localPlayer,0,4)
+        setElementData(localPlayer,"cassetteInHand",false)
+        triggerServerEvent("dropCasette", localPlayer, localPlayer)
+    end
+end)
+
+function getAndDrawVehicleCassette()
+    local playerPosX, playerPosY, playerPosZ = getElementPosition(localPlayer)
+		local playerInterior = getElementInterior(localPlayer)
+		local playerDimension = getElementDimension(localPlayer)
+
+		local vehicleFound = getPedOccupiedVehicle(localPlayer)
+		local lastMinDistance = math.huge
+        local vehData1 = 0
+        local vehData2 = 0
+
+		if not isElement(vehicleFound) then
+			local vehicles = getElementsByType("vehicle", getRootElement(), true)
+
+			for i = 1, #vehicles do
+				local vehicle = vehicles[i]
+                if getElementModel(vehicle) == 428 then
+                    if getElementData(vehicle,"cassetteVehicleID") >= 1 and getElementData(vehicle,"cassetteVehicleID") <= 4 then
+                        if isElement(vehicle) and getElementInterior(vehicle) == playerInterior and getElementDimension(vehicle) == playerDimension then
+                            vehX, vehY, vehZ = getElementPosition(vehicle)
+                            local distance = getDistanceBetweenPoints3D(playerPosX, playerPosY, playerPosZ, vehX-3.0,vehY,vehZ)
+                            local theVeh = getPedOccupiedVehicle(localPlayer)
+                            if distance <= 1 and distance < lastMinDistance then
+                                lastMinDistance = distance
+                                vehicleFound = vehicle
+                                vehData1 = getElementData(vehicle,"defaultCassetteInVehicle")
+                                vehData2 = getElementData(vehicle,"cassetteInVehicle")
+                                vehData3 = getElementData(vehicle,"cassetteVehicleID")
+                            end
+                        end
+                    end
+                end
+			end
+		end
+
+		if isElement(vehicleFound) then
+            if not getPedOccupiedVehicle(localPlayer) then
+                dxDrawText("Üres láda kivétele "..green.."(o)"..white..". Teli láda kivétele "..green.."(q)"..white.." betű.", 1265/oX*x,1050/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.45/oX*x, font, "center", "center",false,false,false,true)
+                dxDrawRectangle(505/oX*x,550/oY*y,280/oX*x,40/oY*y,tocolor(0,0,0,200))
+                for i = 1, vehData1 do
+                    dxDrawImage(485/oX*x+(i*32.5/oX*x),555/oY*y,30/oX*x,30/oY*y,"files/png/box.png",0,0,0,tocolor(150,150,150,255))
+                end
+                if vehData2 >= 1 then
+                    for i = 1, vehData2 do
+                        dxDrawImage(485/oX*x+(i*32.5/oX*x),555/oY*y,30/oX*x,30/oY*y,"files/png/box.png",0,0,0,tocolor(135,211,124,255))
+                    end
+                end
+                dxDrawRectangle(505/oX*x,595/oY*y,280/oX*x,10/oY*y,tocolor(100,100,100,200))
+                if vehData2 == 1 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,35/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 2 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,70/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 3 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,105/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 4 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,140/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 5 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,175/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 6 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,210/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 7 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,245/oX*x,10/oY*y,tocolor(135,211,124,200))
+                elseif vehData2 == 8 then
+                    dxDrawRectangle(505/oX*x,595/oY*y,280/oX*x,10/oY*y,tocolor(135,211,124,200))
+                end
+                dxDrawText(vehData2.."/"..vehData1, 1265/oX*x,1177.5/oY*y,20/oX*x,20/oY*y, tocolor(255,255,255), 0.3/oX*x, font, "center", "center",false,false,false,true)
+            end
+		end
+	end
+addEventHandler("onClientRender",getRootElement(),getAndDrawVehicleCassette)
+
+bindKey("o", "down",
+	function ()
+		local playerPosX, playerPosY, playerPosZ = getElementPosition(localPlayer)
+		local playerInterior = getElementInterior(localPlayer)
+		local playerDimension = getElementDimension(localPlayer)
+
+		local vehicleFound = getPedOccupiedVehicle(localPlayer)
+		local lastMinDistance = math.huge
+        local vehData1 = 0
+        local vehData2 = 0
+
+		if not isElement(vehicleFound) then
+			local vehicles = getElementsByType("vehicle", getRootElement(), true)
+
+			for i = 1, #vehicles do
+				local vehicle = vehicles[i]
+                if getElementModel(vehicle) == 428 then
+
+                    if isElement(vehicle) and getElementInterior(vehicle) == playerInterior and getElementDimension(vehicle) == playerDimension then
+                        vehX, vehY, vehZ = getElementPosition(vehicle)
+                        local distance = getDistanceBetweenPoints3D(playerPosX, playerPosY, playerPosZ, vehX-3.0,vehY,vehZ)
+
+                        if distance <= 1 and distance < lastMinDistance then
+                            lastMinDistance = distance
+                            vehicleFound = vehicle
+                            vehData1 = getElementData(vehicle,"defaultCassetteInVehicle")
+                            vehData2 = getElementData(vehicle,"cassetteInVehicle")
+                            vehData3 = getElementData(vehicle,"cassetteVehicleID")
+                        end
+                    end
+                end
+			end
+		end
+
+		if isElement(vehicleFound) then
+            if getElementData(localPlayer,"cassetteInHand") == false then
+                if getElementData(localPlayer,"defalultCassetteInHand") == false then
+                    -- -1
+                    if (vehData1-1) >= 0 then
+                        triggerServerEvent("vehicleDeaultCassetteAddOrRemove",localPlayer,localPlayer,vehicleFound,1)
+                        setElementData(localPlayer,"defalultCassetteInHand",true)
+                    else
+                    end
+                else
+                    -- +1
+                    if (vehData1+1) <= 8 then
+                        triggerServerEvent("vehicleDeaultCassetteAddOrRemove",localPlayer,localPlayer,vehicleFound,2)
+                        setElementData(localPlayer,"defalultCassetteInHand",false)
+                        triggerServerEvent("dropCasette", localPlayer, localPlayer)
+                    end 
+                end
+            end
+		end
+	end
+)
+
+bindKey("q", "down",
+	function ()
+		local playerPosX, playerPosY, playerPosZ = getElementPosition(localPlayer)
+		local playerInterior = getElementInterior(localPlayer)
+		local playerDimension = getElementDimension(localPlayer)
+
+		local vehicleFound = getPedOccupiedVehicle(localPlayer)
+		local lastMinDistance = math.huge
+        local vehData1 = 0
+        local vehData2 = 0
+
+		if not isElement(vehicleFound) then
+			local vehicles = getElementsByType("vehicle", getRootElement(), true)
+
+			for i = 1, #vehicles do
+				local vehicle = vehicles[i]
+                if getElementModel(vehicle) == 428 then
+
+                    if isElement(vehicle) and getElementInterior(vehicle) == playerInterior and getElementDimension(vehicle) == playerDimension then
+                        vehX, vehY, vehZ = getElementPosition(vehicle)
+                        local distance = getDistanceBetweenPoints3D(playerPosX, playerPosY, playerPosZ, vehX-3.0,vehY,vehZ)
+
+                        if distance <= 1 and distance < lastMinDistance then
+                            lastMinDistance = distance
+                            vehicleFound = vehicle
+                            vehData1 = getElementData(vehicle,"defaultCassetteInVehicle")
+                            vehData2 = getElementData(vehicle,"cassetteInVehicle")
+                            vehData3 = getElementData(vehicle,"cassetteVehicleID")
+                        end
+                    end
+                end
+			end
+		end
+
+		if isElement(vehicleFound) then
+            if getElementData(localPlayer,"defalultCassetteInHand") == false then
+                if getElementData(localPlayer,"cassetteInHand") == false then
+                    -- -1
+                    if (vehData2-1) >= 0 then
+                        triggerServerEvent("vehicleCassetteAddOrRemove",localPlayer,localPlayer,vehicleFound,1)
+                        setElementData(localPlayer,"cassetteInHand",true)
+                    else
+                    end
+                else
+                    -- +1
+                    if (vehData2+1) <= 8 then
+                        triggerServerEvent("vehicleCassetteAddOrRemove",localPlayer,localPlayer,vehicleFound,2)
+                        setElementData(localPlayer,"cassetteInHand",false)
+                        triggerServerEvent("dropCasette", localPlayer, localPlayer)
+                    end 
+                end
+            end
+		end
+	end
+)
+
+addEvent("successGateOpen", true)
+addEventHandler("successGateOpen", root,
+	function()
+        outputChatBox(blue.."[RAKTÁR]"..white.." Sikeresen feltörted a kaput!",255,255,255,true)
+        triggerServerEvent("gateObjectMove",localPlayer)
+        triggerServerEvent("sendGroupMessage",localPlayer,white.."Valaki feltörte a kaput!")
+	end
+)
+
+addEvent("failedGateOpen", true)
+addEventHandler("failedGateOpen", root,
+	function()
+        outputChatBox(blue.."[RAKTÁR]"..white.." Nem sikerült feltörnöd a kaput!",255,255,255,true)
+        --outputChatBox(white.." A rendvédelmi szervek "..blue.."30 percig "..white.."látni fognak.",255,255,255,true)
+        triggerServerEvent("sendGroupMessage",localPlayer,white.."Valaki megpróbálta feltörni a raktárat.")
+            for k, v in ipairs(getElementsByType("player")) do
+                if exports.cosmo_groups:isPlayerInGroup(v, 1) or exports.cosmo_groups:isPlayerInGroup(v, 4) then
+                    --if not isTimer(playerBlipTimer) then
+                       -- setTimer(function()
+                            --[[local x,y,z = getElementPosition(localPlayer)
+                            playerBlip = createBlip(x,y,z,14)
+                            setElementData(playerBlip,"blipIcon","target")
+                            setElementData(playerBlip,"blipTooltipText","Sikertelen feltörő")
+                            setElementData(playerBlip,"blipColor",tocolor(222,107,107,255))
+                            setElementData(localPlayer,"createBlip",true)
+                            attachElements(playerBlip,localPlayer)]]
+                        --    playerBlipTimer = setTimer(function() end, 30000, 1)
+                        --end, 30000,1)
+                    --end
+                end
+            end
+	end
+)
+addEventHandler("onClientRender", root, function()
+    if not isTimer(playerBlipTimer) then
+        if isElement(playerBlip) then 
+            destroyElement(playerBlip)
+        end
+    end
+    if not isTimer(sirenSoundTimer) then
+        if isElement(sirenSound) then 
+            destroyElement(sirenSound)
+        end
+    end
+end)
+
+addEvent("successBankDoorOpen", true)
+addEventHandler("successBankDoorOpen", root,
+	function()
+        if getElementData(robbedPed,"robbedPed") == true then --success
+            outputChatBox(blue.."[RAKTÁR]"..white.." Sikeresen feltörted a kaput!",255,255,255,true)
+            triggerServerEvent("bankDoorMove",localPlayer)
+        elseif getElementData(robbedPed,"robbedPed") == false then --success start sirensound
+            outputChatBox(blue.."[RAKTÁR]"..white.." Sikeresen feltörted a kaput!",255,255,255,true)
+            triggerServerEvent("bankDoorMove",localPlayer)
+            if not isElement(sirenSound) then
+                sirenSound = playSound3D("files/sounds/siren.mp3",587.84680175781, -1534.2004394531, 19.390674591064,true)
+                setSoundMaxDistance(sirenSound, 250)
+		        setElementInterior(sirenSound, 0)
+		        setElementDimension(sirenSound, 0)
+                sirenSoundTimer = setTimer(function() end, 30000, 1)
+            end
+        end
+	end
+)
+
+addEvent("failedBankDoorOpen", true)
+addEventHandler("failedBankDoorOpen", root,
+	function()
+        if not isElement(sirenSound) then
+            sirenSound = playSound3D("files/sounds/siren.mp3",587.84680175781, -1534.2004394531, 19.390674591064,true)
+            setSoundMaxDistance(sirenSound, 250)
+		    setElementInterior(sirenSound, 0)
+		    setElementDimension(sirenSound, 0)
+            sirenSoundTimer = setTimer(function() end, 30000, 1)
+        end
+	end
+)
+
+function isBoxInSlot( x, y, width, height )
+    local targetX, targetY, targetW, targetH = sx/2-25,sy-200,50,50;
+    if (x >= targetX and x <= targetX + targetW) and (y >= targetY and y <= targetY + targetH) then
+        return true;
+    else 
+        return false;
+    end
+end
+
+function isInSlot(xS,yS,wS,hS)
+	if(isCursorShowing()) then
+		XY = {guiGetScreenSize()}
+		local cursorX, cursorY = getCursorPosition()
+		cursorX, cursorY = cursorX*XY[1], cursorY*XY[2]
+		if(isInBox(xS,yS,wS,hS, cursorX, cursorY)) then
+			return true
+		else
+			return false
+		end
+	end	
+end
+
+function isInBox(dX, dY, dSZ, dM, eX, eY)
+	if(eX >= dX and eX <= dX+dSZ and eY >= dY and eY <= dY+dM) then
+		return true
+	else
+		return false
+	end
+end
+
+function removeBuildingForPlayer(player, id, x, y, z, radius)
+	removeWorldModel(id,radius,x,y,z)
+end
+
+removeBuildingForPlayer(playerid, 6480, 588.1797, -1530.4688, 25.5938, 0.25)
+removeBuildingForPlayer(playerid, 1529, 583.4609, -1502.1094, 16.0000, 0.25)
+removeBuildingForPlayer(playerid, 1266, 591.7266, -1508.9297, 25.3125, 0.25)
+removeBuildingForPlayer(playerid, 673, 559.6719, -1569.0000, 12.1719, 0.25)
+removeBuildingForPlayer(playerid, 700, 558.7656, -1556.6641, 15.0703, 0.25)
+removeBuildingForPlayer(playerid, 625, 557.2578, -1548.9141, 15.1719, 0.25)
+removeBuildingForPlayer(playerid, 625, 557.2578, -1532.7734, 14.7188, 0.25)
+removeBuildingForPlayer(playerid, 6340, 588.1797, -1530.4688, 25.5938, 0.25)
+removeBuildingForPlayer(playerid, 6370, 570.2031, -1530.4141, 23.6641, 0.25)
+removeBuildingForPlayer(playerid, 625, 557.1016, -1523.8125, 14.3828, 0.25)
+removeBuildingForPlayer(playerid, 625, 556.2109, -1516.7813, 14.3438, 0.25)
+removeBuildingForPlayer(playerid, 625, 556.2109, -1500.3906, 14.3438, 0.25)
+removeBuildingForPlayer(playerid, 625, 557.1016, -1490.0156, 14.2031, 0.25)
+removeBuildingForPlayer(playerid, 1260, 591.7266, -1508.9297, 25.3047, 0.25)

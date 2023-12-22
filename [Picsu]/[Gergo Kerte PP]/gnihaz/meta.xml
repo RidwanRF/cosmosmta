@@ -1,0 +1,8 @@
+<meta>
+    <script src="client.lua" type="client" />
+	
+    <file src="phouse.dff" />
+    <file src="phouse.txd" />
+    <file src="phouse.col" />
+	
+</meta>

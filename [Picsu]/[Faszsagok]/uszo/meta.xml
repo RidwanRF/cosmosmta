@@ -1,0 +1,7 @@
+<meta>
+    <script src="client.luac" type="client" />
+    
+    <file src="uszo.dff" />
+    <file src="uszo.txd" />
+    
+</meta>

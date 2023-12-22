@@ -1,0 +1,13 @@
+<meta>
+    <script src="sourceG.luac" type="shared" cache="false" />
+    <script src="sourceC.luac" type="client" cache="false" />
+    <script src="utilsC.luac" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    
+    <export function="isElementInServiceZone" type="client" />
+    
+    <file src="files/wrench.png" />
+    <file src="files/repair.mp3" />
+    <file src="files/ratchet.wav" />
+    <download_priority_group>-64</download_priority_group>
+</meta>

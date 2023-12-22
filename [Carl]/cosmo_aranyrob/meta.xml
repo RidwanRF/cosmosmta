@@ -1,0 +1,23 @@
+<meta>
+    <script src="client.luac" type="client" cache="false" />
+    <script src="global.luac" type="shared" cache="false" />
+    <script src="server.luac" type="server" />
+    
+    <file src="files/fonts/Roboto.ttf" />
+    <file src="files/fonts/myriadproregular.ttf" />
+    
+    <file src="files/png/box.png" />
+    <file src="files/png/keypad.png" />
+    
+    <file src="files/models/goldbox.col" />
+    <file src="files/models/goldbox.txd" />
+    <file src="files/models/box.dff" />
+    <file src="files/models/boxInGold.dff" />
+    <file src="files/models/goldbar.col" />
+    <file src="files/models/goldbar.txd" />
+    <file src="files/models/goldbar.dff" />
+    
+    <file src="files/sounds/siren.mp3" />
+    
+    <map src="files/map/bank.map" dimension="0"></map>
+</meta>

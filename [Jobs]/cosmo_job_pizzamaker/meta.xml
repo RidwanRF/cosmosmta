@@ -1,0 +1,54 @@
+<meta>
+	<download_priority_group>-31</download_priority_group>
+	
+	<script src="global.lua" type="shared" cache="false"></script>
+	<script src="client.lua" type="client" cache="false"></script>
+	<script src="server.lua" type="server"></script>
+
+	<file src="images/pizzaalap.png"/>
+	<file src="images/pizzaalapp.png"/>
+	<file src="images/pizzaalapt.png"/>
+	<file src="images/pizzaalapb.png"/>
+
+	<file src="images/sajtnelk.png"/>
+	<file src="images/sajt.png"/>
+	<file src="images/sajtextra.png"/>
+
+	<file src="images/tejfolos.png"/>
+	<file src="images/ketchup.png"/>
+	<file src="images/bbq.png"/>
+
+	<file src="images/ings/ananasz.png"/>
+	<file src="images/ings/bab.png"/>
+	<file src="images/ings/bacon.png"/>
+	<file src="images/ings/brokkoli.png"/>
+	<file src="images/ings/gomba.png"/>
+	<file src="images/ings/gyros.png"/>
+	<file src="images/ings/hagyma.png"/>
+	<file src="images/ings/jalapeno.png"/>
+	<file src="images/ings/kukorica.png"/>
+	<file src="images/ings/pepperoni.png"/>
+	<file src="images/ings/sonka.png"/>
+	<file src="images/ings/tojas.png"/>
+
+	<file src="images/trash.png"/>
+	<file src="images/arrow.png"/>
+	<file src="images/arrowl.png"/>
+	<file src="images/pipa.png"/>
+
+	<file src="images/vekony.png"/>
+	<file src="images/normal.png"/>
+	<file src="images/vastag.png"/>
+
+	<file src="images/uditok/c033.png"/>
+	<file src="images/uditok/c05.png"/>
+	<file src="images/uditok/c125.png"/>
+	<file src="images/uditok/f033.png"/>
+	<file src="images/uditok/f05.png"/>
+	<file src="images/uditok/f125zero.png"/>
+	<file src="images/uditok/s033.png"/>
+	<file src="images/uditok/s05.png"/>
+	<file src="images/uditok/s125.png"/>
+
+	<file src = "trash_to_bin.wav"/>
+</meta>

@@ -1,0 +1,11 @@
+<meta>
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    <file src="files/shutter.mp3" />
+    
+    <file src="files/traffi_allo.col" />
+    <file src="files/traffi_allo.txd" />
+    <file src="files/traffi_allo.dff" />
+    
+    <oop>true</oop>
+</meta>

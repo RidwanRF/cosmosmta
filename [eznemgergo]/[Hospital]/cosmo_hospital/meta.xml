@@ -1,0 +1,9 @@
+<meta>
+    
+    <script src="server.luac" type="client" />
+    
+    <file src="hosp.txd" />
+    <file src="hosp.dff" />
+    <file src="hosp.col" />
+    
+</meta>

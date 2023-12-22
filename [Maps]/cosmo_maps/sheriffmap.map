@@ -1,0 +1,8 @@
+<map edf:definitions="editor_main">
+    <object id="object (cjgaragedoor) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="17951" scale="1" doublesided="false" collisions="true" posX="617.20001" posY="-583.20001" posZ="18" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (Gen_doorEXT15) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="1536" scale="1" doublesided="false" collisions="true" posX="620.40002" posY="-565" posZ="25.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (helipad01) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="3934" scale="1" doublesided="false" collisions="true" posX="615.20001" posY="-575.09998" posZ="25.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (BinNt07_LA) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="1337" scale="1" doublesided="false" collisions="true" posX="152.10001" posY="160" posZ="487.70001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (parkbench1) (1)" breakable="true" interior="0" alpha="255" dimension="0" model="1280" scale="1" doublesided="false" collisions="true" posX="610.70001" posY="-559" posZ="16.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (parkbench1) (2)" breakable="true" interior="0" alpha="255" dimension="0" model="1280" scale="1" doublesided="false" collisions="true" posX="617" posY="-593.20001" posZ="16.6" rotX="0" rotY="0" rotZ="270"></object>
+</map>

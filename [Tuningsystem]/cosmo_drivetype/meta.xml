@@ -1,0 +1,12 @@
+<meta>
+    <script src="codeC.lua" type="client" cache="false" />
+    <script src="codeS.lua" type="server" />
+    
+    <file src="files/panel.png" />
+    <file src="files/led1.png" />
+    <file src="files/led2.png" />
+    <file src="files/buttonposition.png" />
+    
+    <download_priority_group>-10</download_priority_group>
+    
+</meta>

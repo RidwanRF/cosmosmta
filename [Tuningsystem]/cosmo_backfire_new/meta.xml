@@ -1,0 +1,9 @@
+<meta>
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    <oop>true</oop>
+    <file src="backfire.mp3" />
+    <file src="growl.mp3" />
+    <file src="backfire.wav" />
+    <file src="kickback.mp3" />
+</meta>

@@ -1,0 +1,256 @@
+<meta>
+    
+    <download_priority_group>-16</download_priority_group>
+    
+    <file src="files/premium/600.txd" />
+    <file src="files/premium/600.dff" />
+    <file src="files/premium/440.txd" />
+    <file src="files/premium/440.dff" />
+    <file src="files/premium/482.txd" />
+    <file src="files/premium/482.dff" />
+    <file src="files/premium/434.txd" />
+    <file src="files/premium/434.dff" />
+    <file src="files/premium/549.txd" />
+    <file src="files/premium/549.dff" />
+    <file src="files/premium/slamvan.txd" />
+    <file src="files/premium/slamvan.dff" />
+    
+    <file src="files/civil/admiral.txd" />
+    <file src="files/civil/admiral.dff" />
+    <file src="files/civil/stratum.txd" />
+    <file src="files/civil/stratum.dff" />
+    <file src="files/civil/jester.txd" />
+    <file src="files/civil/jester.dff" />
+    <file src="files/civil/sultan.txd" />
+    <file src="files/civil/sultan.dff" />
+    <file src="files/civil/towtruck.txd" />
+    <file src="files/civil/towtruck.dff" />
+    <file src="files/civil/pot1.txd" />
+    <file src="files/civil/pot1.dff" />
+    <file src="files/civil/hustler.txd" />
+    <file src="files/civil/hustler.dff" />
+    <file src="files/civil/roadtrain.txd" />
+    <file src="files/civil/roadtrain.dff" />
+    
+    <file src="files/civil/blistac.txd" />
+    <file src="files/civil/blistac.dff" />
+    
+    <file src="files/civil/comet.txd" />
+    <file src="files/civil/comet.dff" />
+    
+    <!--     <file src="files/premium/mower.txd" />
+    <file src="files/premium/mower.dff" />
+    <file src="files/premium/broadway.txd" />
+    <file src="files/premium/broadway.dff" />
+    <file src="files/premium/moonbeam.txd" />
+    <file src="files/premium/moonbeam.dff" />
+    <file src="files/premium/remington.txd" />
+    <file src="files/premium/remington.dff" /> -->
+    
+    <file src="files/civil/dune.txd" />
+    <file src="files/civil/dune.dff" />
+    <file src="files/civil/feltzer.txd" />
+    <file src="files/civil/feltzer.dff" />
+    <file src="files/civil/fbiranch.txd" />
+    <file src="files/civil/fbiranch.dff" />
+    <file src="files/civil/fbitruck.txd" />
+    <file src="files/civil/fbitruck.dff" />
+    <file src="files/civil/lspdrancher.txd" />
+    <file src="files/civil/lspdrancher.dff" />
+    <file src="files/civil/copcarla.txd" />
+    <file src="files/civil/copcarla.dff" />
+    <file src="files/civil/alpha.txd" />
+    <file src="files/civil/alpha.dff" />
+    <file src="files/civil/banshee.dff" />
+    <file src="files/civil/banshee.txd" />
+    <file src="files/civil/barracks.dff" />
+    <file src="files/civil/barracks.txd" />
+    <file src="files/civil/bfinjection.dff" />
+    <file src="files/civil/bfinjection.txd" />
+    <file src="files/civil/bmx.dff" />
+    <file src="files/civil/bmx.txd" />
+    <file src="files/civil/cheetah.dff" />
+    <file src="files/civil/cheetah.txd" />
+    <file src="files/civil/boxville.dff" />
+    <file src="files/civil/boxville.txd" />
+    <file src="files/civil/buffalo.dff" />
+    <file src="files/civil/buffalo.txd" />
+    <file src="files/civil/bullet.dff" />
+    <file src="files/civil/bullet.txd" />
+    <file src="files/civil/cabbie.dff" />
+    <file src="files/civil/cabbie.txd" />
+    <file src="files/civil/cadrona.dff" />
+    <file src="files/civil/cadrona.txd" />
+    <file src="files/civil/camper.dff" />
+    <file src="files/civil/camper.txd" />
+    <file src="files/civil/perennial.dff" />
+    <file src="files/civil/perennial.txd" />
+    <file src="files/civil/premier.dff" />
+    <file src="files/civil/premier.txd" />
+    <file src="files/civil/cargobob.dff" />
+    <file src="files/civil/cargobob.txd" />
+    <file src="files/civil/clover.dff" />
+    <file src="files/civil/clover.txd" />
+    <file src="files/civil/club.dff" />
+    <file src="files/civil/club.txd" />
+    <file src="files/civil/copcarsf.dff" />
+    <file src="files/civil/copcarsf.txd" />
+    <file src="files/civil/copcarvg.dff" />
+    <file src="files/civil/copcarvg.txd" />
+    <file src="files/civil/elegant.dff" />
+    <file src="files/civil/elegant.txd" />
+    <file src="files/civil/emperor.dff" />
+    <file src="files/civil/emperor.txd" />
+    <file src="files/civil/enforcer.dff" />
+    <file src="files/civil/enforcer.txd" />
+    <file src="files/civil/euros.dff" />
+    <file src="files/civil/euros.txd" />
+    <file src="files/civil/faggio.dff" />
+    <file src="files/civil/faggio.txd" />
+    
+    <file src="files/civil/fcr900.dff" />
+    <file src="files/civil/fcr900.txd" />
+    <file src="files/civil/fortune.dff" />
+    <file src="files/civil/fortune.txd" />
+    <file src="files/civil/freeway.dff" />
+    <file src="files/civil/freeway.txd" />
+    <file src="files/civil/greenwood.dff" />
+    <file src="files/civil/greenwood.txd" />
+    <file src="files/civil/polmav.dff" />
+    <file src="files/civil/polmav.txd" />
+    <file src="files/civil/hermes.dff" />
+    <file src="files/civil/hermes.txd" />
+    <file src="files/civil/hotrina.dff" />
+    <file src="files/civil/hotrina.txd" />
+    <file src="files/civil/hotrinb.dff" />
+    <file src="files/civil/hotrinb.txd" />
+    <file src="files/civil/hotring.dff" />
+    <file src="files/civil/hotring.txd" />
+    <file src="files/civil/huntley.dff" />
+    <file src="files/civil/huntley.txd" />
+    <file src="files/civil/infernus.dff" />
+    <file src="files/civil/infernus.txd" />
+    <file src="files/civil/intruder.dff" />
+    <file src="files/civil/intruder.txd" />
+    <file src="files/civil/jesseboat.dff" />
+    <file src="files/civil/jesseboat.txd" />
+    <file src="files/civil/landstal.dff" />
+    <file src="files/civil/landstal.txd" />
+    <file src="files/civil/majestic.dff" />
+    <file src="files/civil/majestic.txd" />
+    <file src="files/civil/manana.dff" />
+    <file src="files/civil/manana.txd" />
+    <file src="files/civil/merit.dff" />
+    <file src="files/civil/merit.txd" />
+    <file src="files/civil/mesa.dff" />
+    <file src="files/civil/mesa.txd" />
+    <file src="files/civil/regina.dff" />
+    <file src="files/civil/regina.txd" />
+    <file src="files/civil/mtbike.dff" />
+    <file src="files/civil/mtbike.txd" />
+    <file src="files/civil/navevo.dff" />
+    <file src="files/civil/navevo.txd" />
+    <file src="files/civil/nebula.dff" />
+    <file src="files/civil/nebula.txd" />
+    <file src="files/civil/nrg500.dff" />
+    <file src="files/civil/nrg500.txd" />
+    <file src="files/civil/oceanic.dff" />
+    <file src="files/civil/oceanic.txd" />
+    <file src="files/civil/packer.dff" />
+    <file src="files/civil/packer.txd" />
+    <file src="files/civil/patriot.dff" />
+    <file src="files/civil/patriot.txd" />
+    
+    <file src="files/civil/pony.dff" />
+    <file src="files/civil/pony.txd" />
+    <file src="files/civil/rancher.dff" />
+    <file src="files/civil/rancher.txd" />
+    <file src="files/civil/reefer.dff" />
+    <file src="files/civil/reefer.txd" />
+    <file src="files/civil/sabre.dff" />
+    <file src="files/civil/sabre.txd" />
+    <file src="files/civil/bravura.dff" />
+    <file src="files/civil/bravura.txd" />
+    <file src="files/civil/sadlshit.dff" />
+    <file src="files/civil/sadlshit.txd" />
+    <file src="files/civil/sanchez.dff" />
+    <file src="files/civil/sanchez.txd" />
+    <file src="files/civil/sandking.dff" />
+    <file src="files/civil/sandking.txd" />
+    <file src="files/civil/solair.dff" />
+    <file src="files/civil/solair.txd" />
+    <file src="files/civil/speeder.dff" />
+    <file src="files/civil/speeder.txd" />
+    <file src="files/civil/stafford.dff" />
+    <file src="files/civil/stafford.txd" />
+    <file src="files/civil/stallion.dff" />
+    <file src="files/civil/stallion.txd" />
+    <file src="files/civil/stretch.dff" />
+    <file src="files/civil/stretch.txd" />
+    <file src="files/civil/sunrise.dff" />
+    <file src="files/civil/sunrise.txd" />
+    <file src="files/civil/supergt.dff" />
+    <file src="files/civil/supergt.txd" />
+    <file src="files/civil/swatvan.dff" />
+    <file src="files/civil/swatvan.txd" />
+    <file src="files/civil/tahoma.dff" />
+    <file src="files/civil/tahoma.txd" />
+    <file src="files/civil/taxi.dff" />
+    <file src="files/civil/taxi.txd" />
+    
+    <file src="files/civil/tractor.dff" />
+    <file src="files/civil/tractor.txd" />
+    <file src="files/civil/trash.dff" />
+    <file src="files/civil/trash.txd" />
+    <file src="files/civil/tropic.dff" />
+    <file src="files/civil/tropic.txd" />
+    <file src="files/civil/turismo.dff" />
+    <file src="files/civil/turismo.txd" />
+    <file src="files/civil/vcnmav.dff" />
+    <file src="files/civil/vcnmav.txd" />
+    <file src="files/civil/vincent.dff" />
+    <file src="files/civil/vincent.txd" />
+    <file src="files/civil/virgo.dff" />
+    <file src="files/civil/virgo.txd" />
+    <file src="files/civil/washing.dff" />
+    <file src="files/civil/washing.txd" />
+    <file src="files/civil/wayfarer.dff" />
+    <file src="files/civil/wayfarer.txd" />
+    <file src="files/civil/willard.dff" />
+    <file src="files/civil/willard.txd" />
+    <file src="files/civil/windsor.dff" />
+    <file src="files/civil/windsor.txd" />
+    <file src="files/civil/yosemite.dff" />
+    <file src="files/civil/yosemite.txd" />
+    <file src="files/civil/zr350.dff" />
+    <file src="files/civil/zr350.txd" />
+    <file src="files/civil/uranus.dff" />
+    <file src="files/civil/uranus.txd" />
+    <file src="files/civil/elegy.txd" />
+    <file src="files/civil/elegy.dff" />
+    <file src="files/civil/raindance.txd" />
+    <file src="files/civil/raindance.dff" />
+    <file src="files/civil/romero.txd" />
+    <file src="files/civil/romero.dff" />
+    
+    <file src="files/civil/496.txd" />
+    <file src="files/civil/496.dff" />
+    <file src="files/civil/566.txd" />
+    <file src="files/civil/566.dff" />
+    
+    
+    <file src="Roboto.ttf" />
+    <file src="RobotoL.ttf" />
+    <file src="Themify.ttf" />
+    
+    <file src="files/logo.png" />
+    
+    <script type="shared" src="sourceG.lua" cache="false" />
+    <script type="client" src="sourceC.lua" cache="false" />
+    
+    <export type="shared" function="getVehicleNameFromModel" />
+    <export type="shared" function="getVehicleName" />
+    <export type="shared" function="getVehicleNameList" />
+    
+    <min_mta_version client="1.5.6-9.16404"></min_mta_version>
+</meta>

@@ -1,0 +1,9 @@
+<meta>  
+    <script src="client.lua" type="client" cache="false"/>
+    <script src="server.lua" type="server" />
+  
+	<file src="fs/SARP.ttf" />
+	<file src="fs/Roboto.ttf" />
+	
+	<file src="fs/stripe.png" />
+</meta>

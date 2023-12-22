@@ -1,0 +1,17 @@
+<meta>
+    <script src="client.luac" type="client" cache="false" />
+    
+    <file src="pump.col" />
+    <file src="pump.dff" />
+    <file src="pump.txd" />
+    
+    
+    <file src="fuelprices.txd" />
+    <file src="fuelprices.dff" />
+    <file src="fuelprices.col" />
+    
+    
+    <file src="pumppistol.txd" />
+    <file src="pumppistol.dff" />
+    
+</meta>

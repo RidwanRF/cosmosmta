@@ -1,0 +1,70 @@
+<meta>
+    <download_priority_group>-20</download_priority_group>
+    
+    <script type="shared" src="sourceG.luac" cache="false" />
+    <script type="server" src="sourceS.lua" />
+    <script type="client" src="sourceC.luac" cache="false" />
+    
+    <min_mta_version client="1.5.7" server="1.5.7" />
+    
+    <file src="files/sounds/win.mp3" />
+    <file src="files/sounds/dealerwin.mp3" />
+    <file src="files/sounds/blackjack.mp3" />
+    <file src="files/sounds/push.mp3" />
+    <file src="files/sounds/newcardintable.mp3" />
+    <file src="files/models/kbblackjack.txd" />
+    
+    <file src="files/cards/back.png" />
+    <file src="files/cards/Q-4.png" />
+    <file src="files/cards/Q-3.png" />
+    <file src="files/cards/Q-2.png" />
+    <file src="files/cards/Q-1.png" />
+    <file src="files/cards/K-4.png" />
+    <file src="files/cards/K-3.png" />
+    <file src="files/cards/K-2.png" />
+    <file src="files/cards/K-1.png" />
+    <file src="files/cards/J-4.png" />
+    <file src="files/cards/J-3.png" />
+    <file src="files/cards/J-2.png" />
+    <file src="files/cards/J-1.png" />
+    <file src="files/cards/A-4.png" />
+    <file src="files/cards/A-3.png" />
+    <file src="files/cards/A-2.png" />
+    <file src="files/cards/A-1.png" />
+    <file src="files/cards/10-4.png" />
+    <file src="files/cards/10-3.png" />
+    <file src="files/cards/10-2.png" />
+    <file src="files/cards/10-1.png" />
+    <file src="files/cards/9-4.png" />
+    <file src="files/cards/9-3.png" />
+    <file src="files/cards/9-2.png" />
+    <file src="files/cards/9-1.png" />
+    <file src="files/cards/8-4.png" />
+    <file src="files/cards/8-3.png" />
+    <file src="files/cards/8-2.png" />
+    <file src="files/cards/8-1.png" />
+    <file src="files/cards/7-4.png" />
+    <file src="files/cards/7-3.png" />
+    <file src="files/cards/7-2.png" />
+    <file src="files/cards/7-1.png" />
+    <file src="files/cards/6-4.png" />
+    <file src="files/cards/6-3.png" />
+    <file src="files/cards/6-2.png" />
+    <file src="files/cards/6-1.png" />
+    <file src="files/cards/5-4.png" />
+    <file src="files/cards/5-3.png" />
+    <file src="files/cards/5-2.png" />
+    <file src="files/cards/5-1.png" />
+    <file src="files/cards/4-4.png" />
+    <file src="files/cards/4-3.png" />
+    <file src="files/cards/4-2.png" />
+    <file src="files/cards/4-1.png" />
+    <file src="files/cards/3-4.png" />
+    <file src="files/cards/3-3.png" />
+    <file src="files/cards/3-2.png" />
+    <file src="files/cards/3-1.png" />
+    <file src="files/cards/2-4.png" />
+    <file src="files/cards/2-3.png" />
+    <file src="files/cards/2-2.png" />
+    <file src="files/cards/2-1.png" />
+</meta>

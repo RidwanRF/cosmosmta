@@ -1,0 +1,42 @@
+<meta>
+    <min_mta_version client="1.5.0" server="1.5.0" />
+
+	<file src="files/fonts/Roboto.ttf"/>
+    <file src="files/fonts/FontAwesome.ttf" />
+    <file src="files/objects/noobj.png"/>
+    <file src="files/circle.png"/>
+    <file src="files/move.png" />
+    <file src="files/delete.png" />
+    <file src="files/rotate.png" />
+    <file src="files/save.png" />
+    <file src="files/scale.png" />
+
+    <file src="files/sounds/hover.mp3" />
+    <file src="files/sounds/accept.mp3" />
+    <file src="files/sounds/open.mp3" />
+    <file src="files/sounds/delete.mp3" />
+    <file src="files/sounds/bubble.mp3" />
+
+  	<file src="files/models/rbs1.txd" />
+  	<file src="files/models/rbs1.dff" />
+  	<file src="files/models/rbs1.col" />
+
+  	<file src="files/models/rbs2.txd" />
+  	<file src="files/models/rbs2.dff" />
+  	<file src="files/models/rbs2.col" />
+
+  	<file src="files/models/rbs3.txd" />
+  	<file src="files/models/rbs3.dff" />
+  	<file src="files/models/rbs3.col" />
+
+  	<file src="files/models/rbs4.txd" />
+  	<file src="files/models/rbs4.dff" />
+  	<file src="files/models/rbs4.col" />
+
+    <script src="assetC.lua" type="client" cache="false" />
+    <script src="sourceG.lua" type="shared" cache="false" />
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="moveC.lua" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    <oop>true</oop>
+</meta>

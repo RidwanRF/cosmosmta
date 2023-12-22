@@ -1,0 +1,303 @@
+local gate1 = {}
+local gate2 = {}
+local veh = {}
+local defaultCassette = {}
+local cassette = {}
+local gold = {}
+local door1 = {}
+local door2 = {}
+local door2keypad = {}
+
+local white = "#FFFFFF"
+local blue = "#1E00FF"
+local green = "#87D37C"
+
+addEventHandler("onResourceStart",resourceRoot,function()
+    gate1 = createObject(971,-1769.3902587891, 987.40643310547, 25.48233795166,0,0,270)
+    setElementInterior(gate1, 0)
+    setElementDimension(gate1, 0)
+    setElementData(gate1, "state", "closed")
+    gate2 = createObject(971,-1769.3902587891, 978.60643310547, 25.48233795166,0,0,270)
+    setElementInterior(gate2, 0)
+    setElementDimension(gate2, 0)
+    setElementData(gate2, "state", "closed")
+    for k,v in ipairs(keypad) do
+        keypad = createObject(v[1], v[2], v[3], v[4], v[5], v[6], v[7])
+        setElementInterior(keypad, v[8])
+        setElementDimension(keypad, v[9])
+        setElementData(keypad, "breakingstate", false)
+    end
+    door1 = createObject(2930,595.48800048828, -1512.2322021484, 17.790674591064,0,0,180)
+    setElementInterior(door1, 0)
+    setElementDimension(door1, 0)
+    setElementData(door1,"doorState","closed")
+    door2 = createObject(2930,604.95218505859, -1528.3883300781, 14.095362091064,0,0,270)
+    setElementInterior(door2, 0)
+    setElementDimension(door2, 0)
+    setElementData(door2,"doorState","closed")
+
+    door2keypad = createObject(2922,605.33590087891, -1527.4283447266, 13.099782371521,0,0,90)
+    setElementInterior(door2keypad, 0)
+    setElementDimension(door2keypad, 0)
+    setElementData(door2keypad,"doorState","closed")
+
+    goldVehicleSpawn()
+    goldSpawnInSafe()
+end)
+
+addEvent("safeDoorMove", true)
+addEventHandler("safeDoorMove", root,
+	function()
+        door2X, door2Y, door2Z = getElementRotation(door2)
+        setElementRotation(door2,door2X,door2Y,door2Z+65)
+        setElementData(door2,"doorState","opened")
+        setTimer(function()
+            saveDoorClose()
+        end, 30000*60*1, 1)
+        setTimer(function()
+            resourceRestart()
+        end, 120000*60*1, 1)
+	end
+)
+
+function resourceRestart()
+    local allResources = getResources()
+    for index, res in ipairs(allResources) do
+        if getResourceState(res) == "running" then
+            if getResourceName(res) == "cosmo_aranyrob" then
+                restartResource(res)
+            end
+        end
+    end
+end
+
+function saveDoorClose()
+    door2X, door2Y, door2Z = getElementRotation(door2)
+    setElementRotation(door2,door2X,door2Y,door2Z-65)
+    setElementData(door2,"doorState","closed")
+end
+
+addEvent("bankDoorMove", true)
+addEventHandler("bankDoorMove", root,
+	function()
+        door1X, door1Y, door1Z = getElementRotation(door1)
+        setElementRotation(door1,door1X,door1Y,door1Z+65)
+        setElementData(door1,"doorState","opened")
+        setTimer(function() 
+            bankDoor1Close()
+        end, 30000*60*1, 1)
+	end
+)
+
+function bankDoor1Close()
+    door1X, door1Y, door1Z = getElementRotation(door1)
+    setElementRotation(door1,door1X,door1Y,door1Z-65)
+    setElementData(door1,"doorState","closed")
+end
+
+function goldSpawnInSafe()
+    for k,v in pairs(goldSpawnPos) do
+        local pos = goldSpawnPos[k]
+        gold = createObject(2437,pos[1],pos[2],pos[3])
+		setElementData(gold,"spawnedGold",true)
+		setElementRotation(gold,0,0,pos[4])
+    end
+end
+
+addEvent("destroyGoldObject",true)
+addEventHandler("destroyGoldObject",getRootElement(),function(playerSource,object,id)
+	destroyElement(object)
+    destroyElement(defaultCassette[playerSource])
+    cassette[playerSource] = createObject(1248, 0, 0, 0)
+    exports.cosmo_boneattach:attachElementToBone(cassette[playerSource],playerSource,12, 0.10, 0.05, 0.10, -90, 0, -20)
+end)
+
+addEvent("destroyCasetteObjectDef",true)
+addEventHandler("destroyCasetteObjectDef",getRootElement(),function(playerSource,object,id)
+	destroyElement(object)
+    setPedAnimation(playerSource, "CARRY", "crry_prtial", 0, true, false, true, true)
+    defaultCassette[playerSource] = createObject(8423, 0, 0, 0)
+    exports.cosmo_boneattach:attachElementToBone(defaultCassette[playerSource],playerSource,12, 0.10, 0.07, 0.10, -90, 0, -20)
+    outputChatBox("A kezettát az '#3A5BB8R#ffffff' gombbal tudod letenni a földre.",playerSource,255,255,255,true)
+end)
+
+addEvent("destroyCasetteObjectFull",true)
+addEventHandler("destroyCasetteObjectFull",getRootElement(),function(playerSource,object,id)
+	destroyElement(object)
+    setPedAnimation(playerSource, "CARRY", "crry_prtial", 0, true, false, true, true)
+    cassette[playerSource] = createObject(1248, 0, 0, 0)
+    exports.cosmo_boneattach:attachElementToBone(cassette[playerSource],playerSource,12, 0.10, 0.07, 0.10, -90, 0, -20)
+    outputChatBox("A kezettát az '#3A5BB8R#ffffff' gombbal tudod letenni a földre.",playerSource,255,255,255,true)
+end)
+
+
+function goldVehicleSpawn()
+    --<<1>>--
+    veh[1] = createVehicle(428,-1703.0655517578, 999.57702636719, 17.5859375)
+    setElementRotation(veh[1],0,0,270)
+    setElementInterior(veh[1],0)
+    setElementDimension(veh[1],0)
+    setElementData(veh[1],"goldCassetteVehicle", true)
+    setElementData(veh[1],"defaultCassetteInVehicle", 8)
+    setElementData(veh[1],"cassetteInVehicle", 0)
+    setElementData(veh[1],"cassetteVehicleID", 1)
+    setElementData(veh[1],"vehcileSignal", math.random(1,2))
+    setElementData(veh[1],"createBlip",false)
+    setVehiclePlateText(veh[1],"CM-CSS1")
+    setElementData(veh[1], "vehicle.engine", true)
+    setVehicleEngineState(veh[1], true)
+     --<<2>>--
+    veh[2] = createVehicle(428,-1703.0655517578, 1003.57702636719, 17.5859375)
+    setElementRotation(veh[2],0,0,270)
+    setElementInterior(veh[2],0)
+    setElementDimension(veh[2],0)
+    setElementData(veh[2],"goldCassetteVehicle", true)
+    setElementData(veh[2],"defaultCassetteInVehicle", 8)
+    setElementData(veh[2],"cassetteInVehicle", 0)
+    setElementData(veh[2],"cassetteVehicleID", 2)
+    setElementData(veh[2],"vehcileSignal", math.random(1,2))
+    setElementData(veh[2],"createBlip",false)
+    setVehiclePlateText(veh[2],"CM-CSS2")
+    setElementData(veh[2], "vehicle.engine", true)
+    setVehicleEngineState(veh[2], true)
+     --<<3>>--
+    veh[3] = createVehicle(428,-1703.0655517578, 1007.57702636719, 17.5859375)
+    setElementRotation(veh[3],0,0,270)
+    setElementInterior(veh[3],0)
+    setElementDimension(veh[3],0)
+    setElementData(veh[3],"goldCassetteVehicle", true)
+    setElementData(veh[3],"defaultCassetteInVehicle", 8)
+    setElementData(veh[3],"cassetteInVehicle", 0)
+    setElementData(veh[3],"cassetteVehicleID", 3)
+    setElementData(veh[3],"vehcileSignal", math.random(1,2))
+    setElementData(veh[3],"createBlip",false)
+    setVehiclePlateText(veh[3],"CM-CSS3")
+    setElementData(veh[3], "vehicle.engine", true)
+    setVehicleEngineState(veh[3], true)
+     --<<4>>--
+    veh[4] = createVehicle(428,-1703.0655517578, 1011.57702636719, 17.5859375)
+    setElementRotation(veh[4],0,0,270)
+    setElementInterior(veh[4],0)
+    setElementDimension(veh[4],0)
+    setElementData(veh[4],"goldCassetteVehicle", true)
+    setElementData(veh[4],"defaultCassetteInVehicle", 8)
+    setElementData(veh[4],"cassetteInVehicle", 0)
+    setElementData(veh[4],"cassetteVehicleID", 4)
+    setElementData(veh[4],"vehcileSignal", math.random(1,2))
+    setElementData(veh[4],"createBlip",false)
+    setVehiclePlateText(veh[4],"CM-CSS4")
+    setElementData(veh[4], "vehicle.engine", true)
+    setVehicleEngineState(veh[4], true)
+end
+
+function sendGroupMessage(msg)
+	for k, v in ipairs(getElementsByType("player")) do
+		if exports.cosmo_groups:isPlayerInGroup(v,1) or exports.cosmo_groups:isPlayerInGroup(v,4) then 
+			outputChatBox(blue.."[" .. "RAKTÁR" .. "] "..white..msg, v, 255, 255, 255, true)
+		end
+	end
+end
+addEvent("sendGroupMessage", true)
+addEventHandler("sendGroupMessage", root, sendGroupMessage)
+
+addEvent("vehicleDeaultCassetteAddOrRemove", true)
+addEventHandler("vehicleDeaultCassetteAddOrRemove", root,
+	function(sourcePlayer,vehicle,state)
+        if state == 1 then
+            setElementData(vehicle,"defaultCassetteInVehicle",getElementData(vehicle,"defaultCassetteInVehicle")-1)
+            setPedAnimation(sourcePlayer, "CARRY", "crry_prtial", 0, true, false, true, true)
+            defaultCassette[sourcePlayer] = createObject(8423, 0, 0, 0)
+            exports.cosmo_boneattach:attachElementToBone(defaultCassette[sourcePlayer],sourcePlayer,12, 0.10, 0.07, 0.10, -90, 0, -20)
+            outputChatBox("A kezettát az '#3A5BB8R#ffffff' gombbal tudod letenni a földre.",sourcePlayer,255,255,255,true)
+        elseif state == 2 then
+            setElementData(vehicle,"defaultCassetteInVehicle",getElementData(vehicle,"defaultCassetteInVehicle")+1)
+            setPedAnimation(sourcePlayer)
+            destroyElement(defaultCassette[sourcePlayer])
+        elseif state == 3 and vehicle == 0 then --def
+            local px,py,pz = getElementPosition(sourcePlayer)
+            casette = createObject(8423,px,py,pz-0.95)
+            setElementData(casette,"casette1",true)
+            setPedAnimation(sourcePlayer)
+            destroyElement(defaultCassette[sourcePlayer])
+        elseif state == 4 and vehicle == 0 then --def
+            local px,py,pz = getElementPosition(sourcePlayer)
+            casette = createObject(1248, px,py,pz-0.95)
+            setElementData(casette,"casette2",true)
+            setPedAnimation(sourcePlayer)
+            destroyElement(cassette[sourcePlayer])
+        end
+	end
+)
+addEvent("vehicleCassetteAddOrRemove", true)
+addEventHandler("vehicleCassetteAddOrRemove", root,
+	function(sourcePlayer,vehicle,state)
+        if state == 1 then
+            setElementData(vehicle,"cassetteInVehicle",getElementData(vehicle,"cassetteInVehicle")-1)
+            setPedAnimation(sourcePlayer, "CARRY", "crry_prtial", 0, true, false, true, true)
+            cassette[sourcePlayer] = createObject(1248, 0, 0, 0)
+            exports.cosmo_boneattach:attachElementToBone(cassette[sourcePlayer],sourcePlayer,12, 0.10, 0.05, 0.10, -90, 0, -20)
+        elseif state == 2 then
+            if getElementData(vehicle,"defaultCassetteInVehicle") < 8 then
+                setElementData(vehicle,"cassetteInVehicle",getElementData(vehicle,"cassetteInVehicle")+1)
+                setPedAnimation(sourcePlayer)
+                destroyElement(cassette[sourcePlayer])
+                setElementData(vehicle,"defaultCassetteInVehicle",getElementData(vehicle,"defaultCassetteInVehicle")+1)
+            elseif getElementData(vehicle,"defaultCassetteInVehicle") == 8 then
+                setElementData(vehicle,"cassetteInVehicle",getElementData(vehicle,"cassetteInVehicle")+1)
+                setPedAnimation(sourcePlayer)
+                destroyElement(cassette[sourcePlayer])
+            end
+        end
+	end
+)
+addEvent("playerCassetteAddOrRemove", true)
+addEventHandler("playerCassetteAddOrRemove", root,
+	function(sourcePlayer)
+        if isElement(cassette[sourcePlayer]) then
+            destroyElement(cassette[sourcePlayer])
+        end
+	end
+)
+
+function dropCasette(player)
+	toggleControl (player, "jump", true)
+	toggleControl (player, "crouch", true)
+	toggleControl (player, "sprint", true)
+	toggleControl (player, "fire", true)
+	toggleControl (player, "aim_weapon", true)
+	toggleControl (player, "enter_passenger", true)
+end
+addEvent("dropCasette", true)
+addEventHandler("dropCasette", root, dropCasette)
+
+function quitPlayer()
+    if defaultCassette[source] then
+		destroyElement(defaultCassette[source])
+		defaultCassette[source] = nil
+	end
+	if cassette[source] then
+		destroyElement(cassette[source])
+		cassette[source] = nil
+	end
+end
+addEventHandler("onPlayerQuit", root, quitPlayer)
+
+addEvent("gateObjectMove", true)
+addEventHandler("gateObjectMove", root,
+	function()
+        gatePosX1, gatePosY1, gatePosZ1 = getElementPosition(gate1)
+        gatePosX2, gatePosY2, gatePosZ2 = getElementPosition(gate2)
+        moveObject(gate1,3000,gatePosX1, gatePosY1, gatePosZ1-9)
+        moveObject(gate2,3000,gatePosX2, gatePosY2, gatePosZ2-9)
+        setTimer(function() 
+            gateClose()
+        end, 15000*60*1, 1)
+	end
+)
+
+function gateClose()
+    atePosX1, gatePosY1, gatePosZ1 = getElementPosition(gate1)
+    gatePosX2, gatePosY2, gatePosZ2 = getElementPosition(gate2)
+    moveObject(gate1,3000,gatePosX1, gatePosY1, gatePosZ1+9)
+    moveObject(gate2,3000,gatePosX2, gatePosY2, gatePosZ2+9)
+end

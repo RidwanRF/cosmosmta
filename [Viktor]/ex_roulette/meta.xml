@@ -1,0 +1,28 @@
+<metaConfig>
+    
+    <script type="client" src="assetC.luac" cache="false" />
+    <script type="client" src="camC.luac" cache="false" />
+    <script type="shared" src="matrix.luac" cache="false" />
+    <script type="shared" src="protectGlobal.luac" cache="false" />
+    <script type="shared" src="sourceG.luac" cache="false" />
+    <script type="client" src="sourceC.luac" cache="false" />
+    
+    <file src="files/chips/1.png"></file>
+    <file src="files/chips/5.png"></file>
+    <file src="files/chips/25.png"></file>
+    <file src="files/chips/50.png"></file>
+    <file src="files/chips/100.png"></file>
+    <file src="files/chips/500.png"></file>
+    
+    <file src="files/sounds/chip1.mp3"></file>
+    <file src="files/sounds/chip2.mp3"></file>
+    <file src="files/sounds/chip3.mp3"></file>
+    
+    <file src="files/chips/chips.txd"></file>
+    
+    <script src="sourceS.lua" />
+    
+    <file src="files/images/rectangle.png" />
+    <min_mta_version client="1.5.7" server="1.5.7" />
+    
+</metaConfig>

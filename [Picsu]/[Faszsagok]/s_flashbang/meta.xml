@@ -1,0 +1,10 @@
+<meta>
+    <script src="sourceC.lua" type="client" />
+    <script src="sourceS.lua" type="server" />
+    <file src="sounds/flashbang_explode.mp3" />
+    <file src="sounds/damage.fx" />
+    <file src="sounds/heartbeat.ogg" />
+    <file src="sounds/tinnitus.ogg" />
+    <export function="toggleFlashbangGranade" type="client" />
+    <export function="toggleFlashbangGranade" type="server" />
+</meta>

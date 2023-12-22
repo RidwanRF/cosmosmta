@@ -1,0 +1,18 @@
+<meta>
+    
+    <script src="sourceC.luac" type="client" cache="false" />
+    
+    <file src="textures.txd" />
+    
+    <file src="building.dff" />
+    <file src="building.col" />
+    <file src="glass.dff" />
+    <file src="glass.col" />
+    <file src="kutfej.dff" />
+    <file src="kutfej.col" />
+    <file src="laeroad38.col" />
+    <file src="laeroad38.dff" />
+    
+    
+    
+</meta>

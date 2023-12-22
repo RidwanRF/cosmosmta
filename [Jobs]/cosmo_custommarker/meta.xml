@@ -1,0 +1,24 @@
+<meta>
+    <script src="client.lua" type="client" cache="false" />
+    <script src="server.lua" type="server" />
+    
+    <file src="files/fire.png" />
+    <file src="files/leaf.png" />
+    <file src="files/water.png" />
+    <file src="files/newspaper.png" />
+    <file src="files/bike.png" />
+    <file src="files/jobvehicle.png" />
+    <file src="files/home.png" />
+    <file src="files/arrow.png" />
+    <file src="files/traffic_light.png" />
+    <file src="files/forklift.png" />
+    <file src="files/shirt.png" />
+    <file src="files/trashbag.png" />
+    <file src="files/burger.png" />
+    <file src="files/oven.png" />
+    <file src="files/pizza.png" />
+    <file src="files/cashmachine.png" />
+    
+    <export function="createCustomMarker" type="client" />
+    <export function="createCustomMarkerServer" type="server" />
+</meta>

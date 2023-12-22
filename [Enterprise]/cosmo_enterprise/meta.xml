@@ -1,0 +1,79 @@
+<meta>
+   <!--  <script src="protectGlobal.lua" type="shared" /> -->
+    <script src="client.lua" type="client" cache="false" validate="true"/>
+    <script src="selector.lua" type="client" cache="false" validate="true"/>
+    <script src="server.lua" type="server" />
+    <script src="global.lua" type="shared" cache="false" validate="true"/>
+    
+    <file src="files/Roboto.ttf" />
+    <file src="files/Roboto-Bold.ttf" />
+    <file src="files/logo.png" />
+    
+    <export function="isInEnterprise" type="shared" />
+    <export function="getEnterprises" type="server" />
+    <export function="getEnterpriseType" type="shared" />
+    <export function="getPlayerEnterpriseRank" type="shared" />
+    <export function="getEnterpriseMoney" type="shared" />
+    <export function="giveEnterpriseMoney" type="shared" />
+    <export function="takeEnterpriseMoney" type="shared" />
+    <export function="getEnterpriseLicense" type="shared" />
+    <export function="getPlayerEnterprises" type="shared" />
+    <export function="getPlayerEnterprisesNotLeader" type="shared" />
+    <export function="takeEnterpriseMoney" type="shared" />
+    <export function="giveEnterpriseMoney" type="shared" />
+    <export function="hasPermission" type="shared" />
+    
+    <file src="files/img/right.png" />
+    <file src="files/img/bg.png" />
+    <file src="files/img/button.png" />
+    <file src="files/img/button_c.png" />
+    <file src="files/img/left.png" />
+    <file src="files/img/line.png" />
+    <file src="files/img/logo.png" />
+
+    <file src="files/img/tooltip_arrow.png" />
+    <file src="files/img/tooltip_bg.png" />
+    
+    <file src="files/img/vehicles/info_bg.png" />
+    <file src="files/img/vehicles/line.png" />
+    <file src="files/img/vehicles/list_bg.png" />
+    <file src="files/img/vehicles/take.png" />
+    <file src="files/img/vehicles/bg.png" />
+    <file src="files/img/vehicles/give.png" />
+    
+    <file src="files/img/ranks/line.png" />
+    <file src="files/img/ranks/name_bg.png" />
+    <file src="files/img/ranks/name_bg_c.png" />
+    <file src="files/img/ranks/pay_bg.png" />
+    <file src="files/img/ranks/pay_bg_c.png" />
+    <file src="files/img/ranks/bg.png" />
+    <file src="files/img/ranks/bar.png" />
+    
+    <file src="files/img/players/green.png" />
+    <file src="files/img/players/green_c.png" />
+    <file src="files/img/players/line.png" />
+    <file src="files/img/players/line_c.png" />
+    <file src="files/img/players/red.png" />
+    <file src="files/img/players/red_c.png" />
+    <file src="files/img/players/tgf.png" />
+    <file src="files/img/players/bg.png" />
+    
+    <file src="files/img/icons/leader.png" />
+    <file src="files/img/icons/locked.png" />
+    <file src="files/img/icons/offline.png" />
+    <file src="files/img/icons/online.png" />
+    <file src="files/img/icons/player.png" />
+    <file src="files/img/icons/unlocked.png" />
+    <file src="files/img/icons/car.png" />
+    
+    <file src="files/img/home/car_bg.png" />
+    <file src="files/img/home/car_line.png" />
+    <file src="files/img/home/incoming.png" />
+    <file src="files/img/home/info_bg.png" />
+    <file src="files/img/home/outcoming.png" />
+    <file src="files/img/home/player_bg.png" />
+    <file src="files/img/home/player_line.png" />
+    
+    <oop>true</oop>
+    <min_mta_version server="1.5.2-9.07903" client="1.5.2-9.07903"></min_mta_version>
+</meta>

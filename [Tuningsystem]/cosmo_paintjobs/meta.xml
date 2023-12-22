@@ -1,0 +1,151 @@
+<meta>
+    <script src="sourceG.lua" type="shared" cache="false" />
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="paintjobC.lua" type="client" cache="false" />
+    
+    <script src="async.lua" type="shared" cache="false" />
+    
+    
+    <file src="paintjobs/1.png" />
+    <file src="paintjobs/2.png" />
+    <file src="paintjobs/3.png" />
+    <file src="paintjobs/4.png" />
+    <file src="paintjobs/5.png" />
+    <file src="paintjobs/6.png" />
+    
+    <file src="files/changer.fx" />
+    
+    <export function="getVehiclePaintjobs" type="shared" />
+    <export function="setVehiclePaintjob" type="client" />
+    
+    <file src="files/paintjobs/596/police596.png" />
+    <file src="files/paintjobs/596/medic596.png" />
+    <file src="files/paintjobs/596/sheriff596.png" />
+    
+    <file src="files/paintjobs/597/medic597.png" />
+    <file src="files/paintjobs/597/police597.png" />
+    <file src="files/paintjobs/597/sheriff597.png" />
+    
+    
+    <file src="files/paintjobs/598/1.dds" />
+    
+    
+    <file src="files/paintjobs/490/1.dds" />
+    <file src="files/paintjobs/490/2.dds" />
+    
+    
+    
+    <file src="files/paintjobs/585/rs21.png" />
+    <file src="files/paintjobs/585/rs22.png" />
+    <file src="files/paintjobs/585/rs23.png" />
+    
+    <file src="files/paintjobs/427/sheriff1.png" />
+    
+    <file src="files/paintjobs/562/nissan1.dds" />
+    <file src="files/paintjobs/562/nissan2.dds" />
+    <file src="files/paintjobs/562/nissan3.dds" />
+    <file src="files/paintjobs/562/nissan4.dds" />
+    
+    <file src="files/paintjobs/445/m51.dds" />
+    <file src="files/paintjobs/445/m52.dds" />
+    <file src="files/paintjobs/445/m62.dds" />
+    <file src="files/paintjobs/445/m63.dds" />
+    <file src="files/paintjobs/445/4.dds" />
+    <file src="files/paintjobs/445/5.dds" />
+    
+    <file src="files/paintjobs/445/carbon.png" />
+    <file src="files/paintjobs/445/marbi.png" />
+    <file src="files/paintjobs/445/warstein.png" />
+    
+    
+    <file src="files/paintjobs/558/m31.dds" />
+    <file src="files/paintjobs/558/m32.dds" />
+    <file src="files/paintjobs/558/m33.dds" />
+    <file src="files/paintjobs/558/m34.dds" />
+    <file src="files/paintjobs/558/2.png" />
+    
+    <file src="files/paintjobs/580/2.dds" />
+    <file src="files/paintjobs/580/3.dds" />
+    <file src="files/paintjobs/580/4.dds" />
+    <file src="files/paintjobs/580/5.dds" />
+    <file src="files/paintjobs/580/6.dds" />
+    
+    <file src="files/paintjobs/495/1.dds" />
+    <file src="files/paintjobs/495/2.dds" />
+    <file src="files/paintjobs/495/3.dds" />
+    <file src="files/paintjobs/495/4.dds" />
+    <file src="files/paintjobs/495/5.dds" />
+    <file src="files/paintjobs/495/6.png" />
+    <file src="files/paintjobs/495/7.png" />
+    
+    <file src="files/paintjobs/426/1.dds" />
+    <file src="files/paintjobs/426/2.dds" />
+    <file src="files/paintjobs/426/3.dds" />
+    <file src="files/paintjobs/426/4.dds" />
+    <file src="files/paintjobs/426/5.dds" />
+    
+    <file src="files/paintjobs/529/remap_body_1.dds" />
+    <file src="files/paintjobs/529/remap_body_2.dds" />
+    <file src="files/paintjobs/529/remap_body_4.dds" />
+    
+    
+    <file src="files/paintjobs/602/1.dds" />
+    <file src="files/paintjobs/602/2.dds" />
+    <file src="files/paintjobs/602/3.dds" />
+    <file src="files/paintjobs/602/4.dds" />
+    
+    
+    <file src="files/paintjobs/483/bark1_483.dds" />
+    <file src="files/paintjobs/483/bark2_483.dds" />
+    <file src="files/paintjobs/483/bark3_483.dds" />
+    
+    <file src="files/paintjobs/546/srt81.png" />
+    <file src="files/paintjobs/546/srt82.png" />
+    <file src="files/paintjobs/546/srt83.png" />
+    
+    <file src="files/paintjobs/451/3.png" />
+    <file src="files/paintjobs/451/4.png" />
+    <file src="files/paintjobs/451/6.png" />
+    <file src="files/paintjobs/451/7.png" />
+    <file src="files/paintjobs/451/8.png" />
+    <file src="files/paintjobs/451/10.png" />
+    
+    <file src="files/paintjobs/480/pors4.dds" />
+    <file src="files/paintjobs/480/pors5.dds" />
+    <file src="files/paintjobs/480/pors6.dds" />
+    
+    <file src="files/paintjobs/533/r8_1.dds" />
+    <file src="files/paintjobs/533/r8_2.dds" />
+    
+    <file src="files/paintjobs/404/rs41.dds" />
+    <file src="files/paintjobs/404/rs42.dds" />
+    <file src="files/paintjobs/404/rs43.dds" />
+    <file src="files/paintjobs/404/rs44.dds" />
+    
+    <file src="files/paintjobs/468/1.dds" />
+    <file src="files/paintjobs/468/2.dds" />
+    <file src="files/paintjobs/468/3.dds" />
+    <file src="files/paintjobs/468/4.dds" />
+    <file src="files/paintjobs/468/5.dds" />
+    
+    <file src="files/paintjobs/550/w210_1.dds" />
+    <file src="files/paintjobs/550/w210_2.dds" />
+    <file src="files/paintjobs/550/w210_3.dds" />
+    
+    
+    <file src="files/paintjobs/420/1.dds" />
+    <file src="files/paintjobs/420/2.dds" />
+    <file src="files/paintjobs/420/3.dds" />
+    
+    <file src="files/paintjobs/540/sub1.png" />
+    <file src="files/paintjobs/540/sub2.png" />
+    <file src="files/paintjobs/540/sub3.png" />
+    <file src="files/paintjobs/540/sub4.png" />
+    
+    <file src="files/paintjobs/442/2.dds" />
+    <file src="files/paintjobs/442/3.dds" />
+    
+    <file src="files/paintjobs/525/1.png" />
+    
+    <download_priority_group>-51</download_priority_group>
+</meta>

@@ -1,0 +1,6 @@
+<script>
+    <script src="sourceC.lua" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    
+    <download_priority_group>-73</download_priority_group>
+</script>

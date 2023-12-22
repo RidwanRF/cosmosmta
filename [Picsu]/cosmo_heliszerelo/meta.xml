@@ -1,0 +1,9 @@
+<meta>
+    <script src="client.lua" type="client" cache="false" />
+    <script src="server.lua" type="server" />
+    <script src="colorPicker.lua" type="client" cache="false" />
+    
+    <file src="files/Roboto.ttf" />
+    <file src="files/palette.png" />
+    <file src="files/light.png" />
+</meta>

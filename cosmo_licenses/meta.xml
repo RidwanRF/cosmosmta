@@ -1,0 +1,22 @@
+<meta>
+    <script src="utilsC.luac" type="client" cache="false"></script>
+    
+    <script src="sourceC.luac" type="client" cache="false"></script>
+    <script src="guiC.luac" type="client" cache="false"></script>
+    <script src="sourceS.lua" type="server"></script>
+    
+    
+    <script src="licenses/identity.luac" type="client" cache="false"></script>
+    <script src="licenses/driver.luac" type="client" cache="false"></script>
+    <script src="licenses/weapon.luac" type="client" cache="false"></script>
+    
+    <script src="exam/driver/sourceG.luac" type="shared" cache="false"></script>
+    <script src="exam/driver/driveC.luac" type="client" cache="false"></script>
+    <script src="exam/driver/examC.luac" type="client" cache="false"></script>
+    <script src="exam/driver/sourceS.lua" type="server"></script>
+    
+    <file src="files/identity.png" />
+    <file src="files/driver.png" />
+    <file src="files/weapon.png" />
+    <download_priority_group>-35</download_priority_group>
+</meta>

@@ -1,0 +1,10 @@
+addEvent("points->FixVehicle->Heli", true)
+addEventHandler("points->FixVehicle->Heli", root, function(vehicle)
+	fixVehicle(vehicle)
+end)
+
+addEvent("points->FuelVehicle->Heli", true)
+addEventHandler("points->FuelVehicle->Heli", root, function(vehicle)
+	local fuelTankSize = exports.cosmo_hud:getTheFuelTankSizeOfVehicle(getElementModel(vehicle))
+	setElementData(vehicle, "vehicle.fuel", tonumber(fuelTankSize))
+end)

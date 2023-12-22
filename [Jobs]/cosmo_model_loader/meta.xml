@@ -1,0 +1,17 @@
+<meta>
+    <script src="loader_g.luac" type="shared" cache="false" />
+    <script src="loader_c.luac" type="client" cache="false" />
+    <script src="loader_s.lua" type="server" />
+    
+    <file src="models/objects/deli/texturestxd.cosmomodel" />
+    
+    <file src="models/objects/deli/buildingdff.cosmomodel" />
+    <file src="models/objects/deli/buildingcol.cosmomodel" />
+    <file src="models/objects/deli/glassdff.cosmomodel" />
+    <file src="models/objects/deli/glasscol.cosmomodel" />
+    <file src="models/objects/deli/kutfejdff.cosmomodel" />
+    <file src="models/objects/deli/kutfejcol.cosmomodel" />
+    <file src="models/objects/deli/laeroad38dff.cosmomodel" />
+    <file src="models/objects/deli/laeroad38col.cosmomodel" />
+    
+</meta>

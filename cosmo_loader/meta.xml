@@ -1,0 +1,24 @@
+<meta>
+    <download_priority_group>-37</download_priority_group>
+    
+    <script src="sourceC.luac" type="client" cache="false" />
+    <script src="sourceS.lua" type="server" />
+    
+    <file src="files/circle.png" />
+    <file src="files/circle_glow.png" />
+    <file src="files/circle_check.png" />
+    <file src="files/logo.png" />
+    <file src="files/1.png" />
+    <file src="files/2.png" />
+    <file src="files/3.png" />
+    <file src="files/4.png" />
+    <file src="files/5.png" />
+    <file src="files/6.png" />
+    <file src="files/loading.mp3" />
+    <file src="files/loading1.mp3" />
+    <file src="files/loading2.mp3" />
+    
+    <export function="startLoadingScreen" type="server" />
+    <export function="startLoadingScreen" type="client" />
+    <export type="client" function="showTheLoadScreen" />
+</meta>

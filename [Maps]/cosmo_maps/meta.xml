@@ -1,0 +1,43 @@
+<meta>
+    <info type="map" version="1.0.0"></info>
+    <map src="palohorgasz.map" dimension="0"></map>
+    <map src="ganton.map" dimension="0"></map>
+    <map src="lshorgasz.map" dimension="0"></map>
+    <map src="busstation.map" dimension="0"></map>
+    <map src="eastpark.map" dimension="0"></map>
+    <map src="maganbirtok_viktor.map" dimension="0"></map>
+    <map src="szepites_glen.map" dimension="0"></map>
+    <map src="palomap.map" dimension="0"></map>
+    <map src="paynspray.map" dimension="0"></map>
+    <!-- <map src="montgomerymap.map" dimension="0"></map> -->
+    <map src="lsszepites.map" dimension="0"></map>
+    <map src="blueberrymap.map" dimension="0"></map>
+    <map src="dillimoremap.map" dimension="0"></map>
+    <map src="station.map" dimension="0"></map>
+    <map src="jefferson.map" dimension="0"></map>
+    <map src="karolyboss_maganbirtok.map" dimension="0"></map>
+    <map src="nrpsmappolas.map" dimension="0"></map>
+    <map src="famiglia_hq.map" dimension="0"></map>
+    <map src="sheriffmap.map" dimension="0"></map>
+    <map src="bratva.map" dimension="0"></map>
+    
+    <map src="tuningmap.map" dimension="0"></map>
+    <map src="hatar.map" dimension="0"></map>
+    <map src="cave.map" dimension="0"></map>
+    <map src="pd.map" dimension="0"></map>
+    <map src="bankmap.map"></map>
+    <settings>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#gravity" value="[ 0.0080000004 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#time" value="12:0"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.luac" type="client" validate="false"></script>
+    <download_priority_group>-12</download_priority_group>
+</meta>

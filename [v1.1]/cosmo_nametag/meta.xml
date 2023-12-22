@@ -1,0 +1,21 @@
+<meta>
+    <download_priority_group>-28</download_priority_group>
+    
+    <file src="files/tazed.png" />
+    <file src="files/cuffed.png" />
+    <file src="files/consoling.png" />
+    <file src="files/typing.png" />
+    <file src="files/drop.png" />
+    
+    <file src="files/devlogo.png" />
+    <file src="files/superadmin.png" />
+    <file src="files/owner.png" />
+    <file src="files/adminlogo.png" />
+    <file src="files/kisadmin.png" />
+    <file src="files/helperlogo.png" />
+    <file src="files/cmlogo.png" />
+    <file src="files/rendszergazda.png" />
+    
+    <script type="server" src="sourceS.lua" />
+    <script type="client" src="sourceC.lua" cache="false" />
+</meta>
